@@ -1,0 +1,38 @@
+{
+  "packages\\nodes-base\\nodes\\Slack\\Slack.node.ts": {
+    "message": ["post", "update", "delete", "get", "getAll"],
+    "channel": ["create", "get", "getAll", "archive", "unarchive"],
+    "user": ["get", "getAll"]
+  },
+  "packages\\nodes-base\\nodes\\Gmail\\Gmail.node.ts": {
+    "message": ["send", "get", "getAll"],
+    "draft": ["create", "get", "getAll", "delete"],
+    "label": ["create", "get", "getAll", "delete"]
+  },
+  "packages\\nodes-base\\nodes\\Airtable\\v2\\actions\\versionDescription.ts": {
+    "record": ["create", "get", "getAll", "update", "delete"],
+    "table": ["get", "getAll"],
+    "base": ["get", "getAll"]
+  },
+  "packages\\nodes-base\\nodes\\OpenAI\\OpenAI.node.ts": {
+    "completion": ["create"],
+    "chat": ["create"],
+    "image": ["create"],
+    "embedding": ["create"]
+  },
+  "packages\\nodes-base\\nodes\\Twitter\\Twitter.node.ts": {
+    "tweet": ["create", "delete", "get"],
+    "user": ["get"],
+    "directMessage": ["create", "get"]
+  },
+  "packages\\nodes-base\\nodes\\WhatsAppBusinessCloud\\WhatsAppBusinessCloud.node.ts": {
+    "message": ["send"],
+    "media": ["get"]
+  },
+  "packages\\nodes-base\\nodes\\Telegram\\Telegram.node.ts": {
+    "message": ["send", "get", "delete", "pin", "unpin"],
+    "chat": ["get"],
+    "callback": ["answer"],
+    "file": ["get"]
+  }
+}

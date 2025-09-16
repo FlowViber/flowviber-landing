@@ -1,0 +1,212 @@
+[
+  {
+    "id": "actionNetwork",
+    "displayName": "Action Network",
+    "name": "actionNetwork",
+    "credentials": "actionNetworkApi",
+    "resources": [
+      "attendance",
+      "event",
+      "person",
+      "personTag",
+      "petition",
+      "signature",
+      "tag"
+    ],
+    "operations": {},
+    "file": "C:\\Users\\nima0\\OneDrive\\Desktop\\flowviber\\agent\\n8n\\packages\\nodes-base\\nodes\\ActionNetwork\\ActionNetwork.node.ts"
+  },
+  {
+    "id": "activeCampaign",
+    "displayName": "ActiveCampaign",
+    "name": "activeCampaign",
+    "credentials": "activeCampaignApi",
+    "resources": [
+      "account",
+      "accountContact",
+      "connection",
+      "contact",
+      "contactList",
+      "contactTag",
+      "deal",
+      "ecommerceCustomer",
+      "ecommerceOrder",
+      "ecommerceOrderProducts",
+      "list",
+      "tag"
+    ],
+    "operations": {},
+    "file": "C:\\Users\\nima0\\OneDrive\\Desktop\\flowviber\\agent\\n8n\\packages\\nodes-base\\nodes\\ActiveCampaign\\ActiveCampaign.node.ts"
+  },
+  {
+    "id": "airtable",
+    "displayName": "Airtable",
+    "name": "airtable",
+    "credentials": "airtableApi",
+    "resources": {},
+    "operations": [
+      "append",
+      "delete",
+      "list",
+      "read",
+      "update"
+    ],
+    "file": "C:\\Users\\nima0\\OneDrive\\Desktop\\flowviber\\agent\\n8n\\packages\\nodes-base\\nodes\\Airtable\\v1\\AirtableV1.node.ts"
+  },
+  {
+    "id": "airtable",
+    "displayName": "Airtable",
+    "name": "airtable",
+    "credentials": "airtableTokenApi",
+    "resources": [
+      "base",
+      "record",
+      "table"
+    ],
+    "operations": {},
+    "file": "C:\\Users\\nima0\\OneDrive\\Desktop\\flowviber\\agent\\n8n\\packages\\nodes-base\\nodes\\Airtable\\v2\\actions\\versionDescription.ts"
+  },
+  {
+    "id": "slack",
+    "displayName": "Slack",
+    "name": "slack",
+    "credentials": "slackApi",
+    "resources": [
+      "message",
+      "channel",
+      "user"
+    ],
+    "operations": [
+      "post",
+      "update",
+      "delete",
+      "get",
+      "getAll"
+    ],
+    "file": "packages\\nodes-base\\nodes\\Slack\\Slack.node.ts"
+  },
+  {
+    "id": "gmail",
+    "displayName": "Gmail",
+    "name": "gmail",
+    "credentials": "gmailOAuth2",
+    "resources": [
+      "message",
+      "draft",
+      "label"
+    ],
+    "operations": [
+      "send",
+      "get",
+      "getAll",
+      "create",
+      "update",
+      "delete"
+    ],
+    "file": "packages\\nodes-base\\nodes\\Gmail\\Gmail.node.ts"
+  },
+  {
+    "id": "cron",
+    "displayName": "Cron",
+    "name": "cron",
+    "credentials": {},
+    "resources": {},
+    "operations": [],
+    "file": "packages\\nodes-base\\nodes\\Cron\\Cron.node.ts"
+  },
+  {
+    "id": "webhook",
+    "displayName": "Webhook",
+    "name": "webhook",
+    "credentials": {},
+    "resources": {},
+    "operations": [],
+    "file": "packages\\nodes-base\\nodes\\Webhook\\Webhook.node.ts"
+  },
+  {
+    "id": "httpRequest",
+    "displayName": "HTTP Request",
+    "name": "httpRequest",
+    "credentials": {},
+    "resources": {},
+    "operations": [
+      "get",
+      "post",
+      "put",
+      "patch",
+      "delete"
+    ],
+    "file": "packages\\nodes-base\\nodes\\HttpRequest\\HttpRequest.node.ts"
+  },
+  {
+    "id": "openai",
+    "displayName": "OpenAI",
+    "name": "openai",
+    "credentials": "openAiApi",
+    "resources": [
+      "completion",
+      "chat",
+      "image",
+      "embedding"
+    ],
+    "operations": [
+      "create",
+      "get"
+    ],
+    "file": "packages\\nodes-base\\nodes\\OpenAI\\OpenAI.node.ts"
+  },
+  {
+    "id": "twitter",
+    "displayName": "Twitter",
+    "name": "twitter",
+    "credentials": "twitterApi",
+    "resources": [
+      "tweet",
+      "user",
+      "directMessage"
+    ],
+    "operations": [
+      "create",
+      "delete",
+      "get",
+      "update"
+    ],
+    "file": "packages\\nodes-base\\nodes\\Twitter\\Twitter.node.ts"
+  },
+  {
+    "id": "whatsappBusinessCloud",
+    "displayName": "WhatsApp Business Cloud",
+    "name": "whatsappBusinessCloud",
+    "credentials": "whatsappBusinessCloudApi",
+    "resources": [
+      "message",
+      "media"
+    ],
+    "operations": [
+      "send",
+      "get"
+    ],
+    "file": "packages\\nodes-base\\nodes\\WhatsAppBusinessCloud\\WhatsAppBusinessCloud.node.ts"
+  },
+  {
+    "id": "telegram",
+    "displayName": "Telegram",
+    "name": "telegram",
+    "credentials": "telegramApi",
+    "resources": [
+      "message",
+      "chat",
+      "callback",
+      "file"
+    ],
+    "operations": [
+      "send",
+      "get",
+      "answer",
+      "pin",
+      "unpin",
+      "delete"
+    ],
+    "file": "packages\\nodes-base\\nodes\\Telegram\\Telegram.node.ts"
+  }
+]

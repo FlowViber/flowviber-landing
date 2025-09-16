@@ -1,0 +1,29 @@
+# Node/Next
+node_modules/
+.next/
+.turbo/
+.vercel/
+.parcel-cache/
+dist/
+build/
+out/
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+ECHO is on.
+# Env / secrets
+.env
+.env.*
+!.env.example
+ECHO is on.
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+ECHO is on.
+# Replit / local runtime state
+.local/
+state/
+repl_state.bin

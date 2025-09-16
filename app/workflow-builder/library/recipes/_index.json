@@ -1,0 +1,180 @@
+[
+  {
+    "id": "commodity-price-tracker-e1a90c7ca1",
+    "name": "Commodity Price Tracker",
+    "path": "library/recipes/commodity-price-tracker-e1a90c7ca1.json",
+    "nodesCount": 11,
+    "nodeTypes": [
+      "agent",
+      "embeddingscohere",
+      "googlesheets",
+      "lmchatanthropic",
+      "memorybufferwindow",
+      "stickynote",
+      "textsplittercharactertextsplitter",
+      "toolvectorstore",
+      "vectorstoreredis",
+      "webhook"
+    ],
+    "nodeDisplays": [
+      "Agent",
+      "Embeddingscohere",
+      "Googlesheets",
+      "Lmchatanthropic",
+      "Memorybufferwindow",
+      "Stickynote",
+      "Textsplittercharactertextsplitter",
+      "Toolvectorstore",
+      "Vectorstoreredis",
+      "Webhook"
+    ],
+    "credentials": [
+      "anthropicApi",
+      "cohereApi",
+      "googleSheetsOAuth2Api",
+      "redisApi"
+    ],
+    "resources": [],
+    "operations": [
+      "append"
+    ],
+    "resOpsPairs": [],
+    "triggers": [],
+    "source": "n8n-free-templates",
+    "sourcePath": "n8n-free-templates/Agriculture/commodity_price_tracker.json"
+  },
+  {
+    "id": "auto-tag-blog-posts-8a00c54986",
+    "name": "Auto-tag Blog Posts",
+    "path": "library/recipes/auto-tag-blog-posts-8a00c54986.json",
+    "nodesCount": 12,
+    "nodeTypes": [
+      "agent",
+      "embeddingsopenai",
+      "googlesheets",
+      "lmchatanthropic",
+      "memorybufferwindow",
+      "slack",
+      "stickynote",
+      "textsplittercharactertextsplitter",
+      "toolvectorstore",
+      "vectorstoresupabase",
+      "webhook"
+    ],
+    "nodeDisplays": [
+      "Agent",
+      "Embeddingsopenai",
+      "Googlesheets",
+      "Lmchatanthropic",
+      "Memorybufferwindow",
+      "Slack",
+      "Stickynote",
+      "Textsplittercharactertextsplitter",
+      "Toolvectorstore",
+      "Vectorstoresupabase",
+      "Webhook"
+    ],
+    "credentials": [
+      "anthropicApi",
+      "googleSheetsOAuth2Api",
+      "openAiApi",
+      "slackApi",
+      "supabaseApi"
+    ],
+    "resources": [],
+    "operations": [
+      "append"
+    ],
+    "resOpsPairs": [],
+    "triggers": [
+      "webhook"
+    ],
+    "source": "n8n-free-templates",
+    "sourcePath": "n8n-free-templates/AI_ML/auto-tag_blog_posts.json"
+  },
+  {
+    "id": "customer-sentiment-analysis-efb53f2b64",
+    "name": "Customer Sentiment Analysis",
+    "path": "library/recipes/customer-sentiment-analysis-efb53f2b64.json",
+    "nodesCount": 12,
+    "nodeTypes": [
+      "agent",
+      "embeddingscohere",
+      "googlesheets",
+      "lmchatanthropic",
+      "memorybufferwindow",
+      "slack",
+      "stickynote",
+      "textsplittercharactertextsplitter",
+      "toolvectorstore",
+      "vectorstorepinecone",
+      "webhook"
+    ],
+    "nodeDisplays": [
+      "Agent",
+      "Embeddingscohere",
+      "Googlesheets",
+      "Lmchatanthropic",
+      "Memorybufferwindow",
+      "Slack",
+      "Stickynote",
+      "Textsplittercharactertextsplitter",
+      "Toolvectorstore",
+      "Vectorstorepinecone",
+      "Webhook"
+    ],
+    "credentials": [
+      "anthropicApi",
+      "cohereApi",
+      "googleSheetsOAuth2Api",
+      "pineconeApi",
+      "slackApi"
+    ],
+    "resources": [],
+    "operations": [
+      "append"
+    ],
+    "resOpsPairs": [],
+    "triggers": [
+      "webhook"
+    ],
+    "source": "n8n-free-templates",
+    "sourcePath": "n8n-free-templates/AI_ML/customer_sentiment_analysis.json"
+  },
+  {
+    "id": "daily-twitter-bot",
+    "name": "Daily Twitter Bot",
+    "path": "library/recipes/daily-twitter-bot.json",
+    "nodesCount": 3,
+    "nodeTypes": [
+      "cron",
+      "openai",
+      "twitter"
+    ],
+    "nodeDisplays": [
+      "Cron",
+      "OpenAI",
+      "Twitter"
+    ],
+    "credentials": [
+      "openAiApi",
+      "twitterApi"
+    ],
+    "resources": [
+      "completion",
+      "tweet"
+    ],
+    "operations": [
+      "create"
+    ],
+    "resOpsPairs": [
+      "completion.create",
+      "tweet.create"
+    ],
+    "triggers": [
+      "cron"
+    ],
+    "source": "flowviber",
+    "sourcePath": "flowviber/examples/daily_twitter_bot.json"
+  }
+]
