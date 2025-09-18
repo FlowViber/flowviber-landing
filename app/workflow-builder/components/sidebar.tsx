@@ -311,6 +311,7 @@ export default function Sidebar({
                           <button
                             onClick={async (e) => {
                               e.stopPropagation()
+                              if (!workflow.n8n_workflow_id) return 
                               const url = await getN8nWorkflowUrl(workflow.n8n_workflow_id)
                               window.open(url, '_blank', 'noopener,noreferrer')
                             }}

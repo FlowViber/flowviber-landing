@@ -2,7 +2,12 @@ import { getRecipesIndex } from "./library";
 
 const LRU = new Map<string, any>();
 const cache = (k: string, v: any) => {
-  if (LRU.size > 50) LRU.delete(LRU.keys().next().value);
+  if (LRU.size > 50) {
+    const key = LRU.keys().next().value
+    if (key) {
+      LRU.delete(key)
+    }
+  }
   LRU.set(k, v);
 };
 

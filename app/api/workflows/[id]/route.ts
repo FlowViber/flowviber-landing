@@ -100,8 +100,9 @@ export async function PATCH(request: NextRequest, context: { params: Promise<{ i
   }
 }
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   try {
+    const params = await context.params
     console.log('[v0] Main API: Force updating workflow', params.id)
     const data = await request.json()
     const db = database()
