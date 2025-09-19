@@ -238,7 +238,7 @@ export default function RightPanel({
       new URL(n8nConfig.baseUrl)
     } catch {
       addToast({
-        variant: "error",
+        variant: "destructive",
         title: "Invalid URL",
         description: "Please enter a valid URL (e.g., https://your-n8n-instance.com)",
       })
@@ -283,7 +283,7 @@ export default function RightPanel({
       const errorMessage = error instanceof Error ? error.message : "Failed to save base URL"
       setN8nConfig((prev) => ({ ...prev, error: errorMessage }))
       addToast({
-        variant: "error",
+        variant: "destructive",
         title: "Save Failed",
         description: `Failed to save n8n base URL: ${errorMessage}`,
       })
@@ -407,7 +407,7 @@ export default function RightPanel({
       const errorMessage = error instanceof Error ? error.message : "Failed to save API key"
       updateApiKey(provider, "error", errorMessage)
       addToast({
-        variant: "error",
+        variant: "destructive",
         title: "Save Failed",
         description: `Failed to save ${provider.toUpperCase()} API key: ${errorMessage}`,
       })
@@ -470,7 +470,7 @@ export default function RightPanel({
         updateApiKey(provider, "error", errorMessage)
         if (!keyOverride) {
           addToast({
-            variant: "error",
+            variant: "destructive",
             title: "Connection Failed",
             description: `${provider.toUpperCase()} connection test failed: ${errorMessage}`,
           })
@@ -482,7 +482,7 @@ export default function RightPanel({
       updateApiKey(provider, "isConnected", false)
       if (!keyOverride) {
         addToast({
-          variant: "error",
+          variant: "destructive",
           title: "Connection Failed",
           description: `${provider.toUpperCase()} connection test failed: ${errorMessage}`,
         })
@@ -533,7 +533,7 @@ export default function RightPanel({
       })
     } catch (error) {
       addToast({
-        variant: "error",
+        variant: "destructive",
         title: "Copy Failed",
         description: "Failed to copy workflow JSON to clipboard.",
       })

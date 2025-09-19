@@ -46,6 +46,11 @@ interface AIResponse {
   error?: string
 }
 
+interface ApiKeyRow {
+  provider: 'openai' | 'claude'
+  encrypted_key: string | null
+}
+
 class AIService {
   private providers: AIProvider[] = []
   private rateLimits = new Map<string, RateLimitInfo>()
@@ -95,7 +100,7 @@ class AIService {
       }
 
       // Map database results to providers
-      result.rows.forEach(row => {
+      result.rows.forEach((row: ApiKeyRow) => {
         const config = providerConfigs[row.provider]
         if (config && row.encrypted_key) {
           this.providers.push({
