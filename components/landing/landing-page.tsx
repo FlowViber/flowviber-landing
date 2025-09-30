@@ -350,8 +350,8 @@ export default function LandingPage() {
     <div className="min-h-screen bg-flow-bg-light dark:bg-flow-bg-dark text-flow-text-light dark:text-flow-text-dark">
       {/* // Contrast checked with WebAIM, meets 4.5:1 */}
         
-        {/* Theme Toggle - Teal, top-right */}
-        <div className="absolute top-4 right-4 z-50">
+        {/* Theme Toggle - top-right */}
+        <div className="absolute top-4 right-6 md:right-8 z-50">
           <ThemeToggle />
         </div>
         
