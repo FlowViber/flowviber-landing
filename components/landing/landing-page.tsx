@@ -354,14 +354,6 @@ export default function LandingPage() {
           <ThemeToggle />
         </div>
         
-        {/* CTA Button - Top Right */}
-        <div className="absolute top-4 right-24 z-40">
-          <Button asChild className="h-10 px-4 bg-flow-cta hover:bg-flow-cta/90 text-white font-medium text-sm">
-            <Link href="/auth/signin">
-              Join Beta
-            </Link>
-          </Button>
-        </div>
 
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-700 pt-24 pb-16">
@@ -399,29 +391,10 @@ export default function LandingPage() {
                 Unlike n8n's single-platform builder, Flow Viber orchestrates n8n, Make, Pabbly, and Stripe in one chatbox.
               </p>
 
-              {/* Hero Actions */}
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
-                <Button asChild size="lg" className="h-14 px-8 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 !text-white font-bold text-lg shadow-lg">
-                  <Link href="/auth/signin" aria-label="Start building workflows for free">
-                    Start Building Free
-                    <ArrowRight className="ml-2 w-5 h-5 !text-white" />
-                  </Link>
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline" 
-                  className="h-14 px-8 border-2 border-flow-link text-flow-link hover:bg-flow-link/10 font-semibold text-lg"
-                  onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  See It in Action
-                  <ExternalLink className="ml-2 w-5 h-5 !text-current" />
-                </Button>
-              </div>
-
               {/* Waitlist Form */}
               <div className="mb-8">
                 <p className="text-sm text-flow-gray-600 dark:text-flow-gray-300 mb-4 text-center">
-                  Or join the beta waitlist for early access:
+                  Join the beta waitlist for early access:
                 </p>
                 <WaitlistForm />
               </div>
@@ -587,17 +560,6 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
-            
-            {/* See It in Action Button */}
-            <div className="text-center mt-8">
-              <Button 
-                className="h-10 px-4 bg-flow-cta hover:bg-flow-cta/90 text-white"
-                onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                See It in Action
-                <ExternalLink className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -682,127 +644,6 @@ export default function LandingPage() {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Preview Section */}
-      <section className="py-20 bg-white dark:bg-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-slate-300">
-              Start free, scale as you grow
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Free Tier */}
-            <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Starter</h3>
-                <p className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-                  Free
-                </p>
-                <p className="text-gray-600 dark:text-slate-300 mb-6">
-                  Perfect for trying out Flow Viber
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">5 workflows per month</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">n8n integration</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">Community support</span>
-                  </li>
-                </ul>
-                <Link href="/auth/signin">
-                  <Button className="w-full" variant="outline">
-                    Start Free
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Pro Tier */}
-            <Card className="bg-gradient-to-b from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-300 dark:border-blue-700 shadow-xl transform scale-105">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-800 !text-white px-3 py-1 rounded-full text-xs font-bold inline-block mb-2">
-                  MOST POPULAR
-                </div>
-                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Pro</h3>
-                <p className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-                  $29<span className="text-lg font-normal">/month</span>
-                </p>
-                <p className="text-gray-600 dark:text-slate-300 mb-6">
-                  For professionals and growing teams
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">Unlimited workflows</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">All integrations</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">Priority support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">Advanced AI models</span>
-                  </li>
-                </ul>
-                <Link href="/auth/signin">
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white">
-                    Start Pro Trial
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Enterprise */}
-            <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Enterprise</h3>
-                <p className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-                  Custom
-                </p>
-                <p className="text-gray-600 dark:text-slate-300 mb-6">
-                  For large organizations
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">Custom AI training</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">Dedicated support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">SLA guarantees</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span className="text-gray-700 dark:text-slate-300">On-premise option</span>
-                  </li>
-                </ul>
-                <Button className="w-full" variant="outline">
-                  Contact Sales
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
