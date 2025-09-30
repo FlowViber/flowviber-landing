@@ -63,8 +63,9 @@ function ThemeToggle() {
   return (
     <Button
       onClick={toggleTheme}
-      className="h-10 px-4 bg-flow-cta hover:bg-flow-cta/90 text-white border-0"
+      className="h-10 px-4 bg-black/10 hover:bg-black/20 text-gray-900 border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/25 backdrop-blur-sm transition-colors"
       aria-label="Toggle theme"
+      aria-pressed={isDark}
     >
       {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </Button>
