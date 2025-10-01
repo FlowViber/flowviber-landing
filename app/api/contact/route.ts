@@ -1,4 +1,7 @@
 import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
   try {
@@ -60,20 +63,26 @@ Sent from FlowViber Contact Form
       }
     }
 
-    // Option 2: Log to console (for development/testing)
+    // Option 2: Send email via Resend (if API key is configured)
+    if (process.env.RESEND_API_KEY) {
+      try {
+        await resend.emails.send({
+          from: 'FlowViber <onboarding@resend.dev>',
+          to: process.env.CONTACT_EMAIL || 'delivered@resend.dev',
+          subject: `New Workflow Request from ${name}`,
+          text: emailContent,
+          replyTo: email,
+        })
+        console.log('Email sent successfully via Resend')
+      } catch (emailError) {
+        console.error('Resend email error:', emailError)
+      }
+    }
+
+    // Option 3: Log to console (for development/testing)
     console.log('=== CONTACT FORM SUBMISSION ===')
     console.log(emailContent)
     console.log('==============================')
-
-    // TODO: When ready, integrate with email service (Resend, SendGrid, etc.)
-    // Example with Resend (if configured):
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'FlowViber <contact@flowviber.com>',
-    //   to: process.env.CONTACT_EMAIL || 'contact@flowviber.com',
-    //   subject: `New Workflow Request from ${name}`,
-    //   text: emailContent,
-    // })
 
     return NextResponse.json({
       success: true,
