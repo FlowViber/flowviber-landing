@@ -1,52 +1,24 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { 
-  ArrowRight, 
-  Bot, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users, 
-  ChevronRight, 
-  Sparkles, 
-  Network, 
-  GitBranch,
-  ShoppingCart,
-  TrendingUp,
-  Database,
-  Headphones,
-  Code,
   Check,
   Star,
-  User,
-  DollarSign,
-  Clock,
-  Lock,
-  PlayCircle,
-  Send,
-  MessageSquare,
-  FileText,
-  Layers,
-  Workflow,
   Moon,
   Sun,
-  Settings,
-  PieChart,
-  ExternalLink,
-  Link as LinkIcon
+  Phone,
+  Mail,
+  Calendar
 } from "lucide-react"
-import Link from "next/link"
 
 // Theme Toggle Component
 function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = React.useState(false)
 
-  useEffect(() => {
-    // Check system preference or localStorage
+  React.useEffect(() => {
     const theme = localStorage.getItem('theme') || 
                  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
     setIsDark(theme === 'dark')
@@ -72,707 +44,437 @@ function ThemeToggle() {
   )
 }
 
-// Interactive Chat Demo Component (300x400px as specified)
-function InteractiveChatDemo() {
-  const [userInput, setUserInput] = useState("")
-  const [messages, setMessages] = useState<Array<{type: string, text: string}>>([])
-  const [isTyping, setIsTyping] = useState(false)
-  const [demoStarted, setDemoStarted] = useState(false)
-  const messagesEndRef = useRef<HTMLDivElement>(null)
-
-  const simulatedResponses: Record<string, string> = {
-    "Build a n8n CRM sync + Make email flow": `Created n8n trigger + Make action! Here's your hybrid workflow:
-
-**n8n CRM Integration:**
-• Webhook trigger for new contacts
-• Data validation & transformation
-• Customer segmentation logic
-
-**Make Email Campaign:**
-• Dynamic email personalization
-• Multi-channel delivery (email/SMS)
-• Engagement tracking
-
-**Cross-Platform Sync:**
-• Real-time contact updates
-• Unified analytics dashboard
-• Error handling & retry logic
-
-Export JSON workflow file?`,
-    
-    "Set up Stripe invoice automation": `Added Stripe payment node successfully!
-
-**Automated Invoice Flow:**
-• Recurring billing schedules
-• Custom invoice templates
-• Payment reminder sequences
-• Tax calculation integration
-
-**Smart Features:**
-• Failed payment recovery
-• Currency auto-conversion
-• Compliance reporting
-• QuickBooks sync ready
-
-Enter your Stripe API key to activate?`,
-    
-    "Combine n8n + QuickBooks sync": `Hybrid flow initiated! Here's your setup:
-
-**n8n Processing:**
-• Real-time transaction monitoring
-• Data validation & cleanup
-• Custom business rules
-
-**QuickBooks Integration:**
-• Automated journal entries
-• Invoice-to-payment tracking
-• Tax category mapping
-• Multi-entity support
-
-**Sync Features:**
-• Bi-directional updates
-• Conflict resolution
-• Audit trail logging
-
-Configure QuickBooks OAuth authentication?`,
-
-    "default": `I can help you build that! Try one of these popular workflows:
-
-• "Build a n8n CRM sync + Make email flow"
-• "Set up Stripe invoice automation"  
-• "Combine n8n + QuickBooks sync"
-
-Or describe your specific automation need and I'll create a custom workflow for you!`
-  }
-
-  const handleSendMessage = (message?: string) => {
-    const messageToSend = message || userInput
-    if (!messageToSend.trim()) return
-
-    const userMessage = messageToSend
-    setMessages(prev => [...prev, { type: "user", text: userMessage }])
-    setUserInput("")
-    setIsTyping(true)
-    setDemoStarted(true)
-
-    setTimeout(() => {
-      const response = simulatedResponses[userMessage] || simulatedResponses["default"]
-      setMessages(prev => [...prev, { type: "ai", text: response }])
-      setIsTyping(false)
-    }, 1500)
-  }
-
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }, [messages])
-
-  return (
-    <div className="w-full h-[300px] md:w-[900px] md:h-[600px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg">
-      {/* Header */}
-      <div className="bg-flow-cta p-3">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center">
-            <Sparkles className="w-4 h-4 text-white" />
-          </div>
-          <div className="flex-1">
-            <h3 className="font-medium text-white text-sm">Flow Viber AI</h3>
-            <p className="text-white/80 text-xs">Interactive Demo</p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Messages Area - Fixed height for 300x400px spec */}
-      <div className="p-3 h-[200px] md:h-[490px] overflow-auto bg-white dark:bg-gray-800">
-        {!demoStarted ? (
-          <div className="text-center py-4">
-            <Bot className="w-8 h-8 text-flow-cta mx-auto mb-2" />
-            <h4 className="text-sm font-semibold text-flow-text-light dark:text-flow-text-dark mb-2">
-              Try Interactive Demo
-            </h4>
-            <p className="text-xs text-flow-gray-600 dark:text-flow-gray-300 mb-3">
-              Click examples:
-            </p>
-            <div className="space-y-1">
-              {Object.keys(simulatedResponses).filter(key => key !== 'default').map((example, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    setUserInput(example)
-                    handleSendMessage(example)
-                  }}
-                  className="block w-full text-left px-2 py-1.5 bg-blue-50 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 rounded text-flow-link text-xs transition-colors"
-                  aria-label={`Try example: ${example}`}
-                >
-                  {example}
-                </button>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-              >
-                {message.type === 'ai' && (
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Bot className="w-4 h-4 !text-white" />
-                  </div>
-                )}
-                <div className={`max-w-[80%] ${message.type === 'user' ? 'order-first' : ''}`}>
-                  <div
-                    className={`rounded-lg p-4 ${
-                      message.type === 'user'
-                        ? 'bg-gradient-to-r from-blue-600 to-blue-800 text-white ml-auto !text-white'
-                        : 'bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 border border-gray-200 dark:border-slate-700 shadow-sm'
-                    }`}
-                  >
-                    <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.text}</p>
-                  </div>
-                </div>
-                {message.type === 'user' && (
-                  <div className="w-8 h-8 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <User className="w-4 h-4 text-white" />
-                  </div>
-                )}
-              </div>
-            ))}
-            
-            {isTyping && (
-              <div className="flex gap-3 justify-start">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Bot className="w-4 h-4 text-white" />
-                </div>
-                <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-4 shadow-sm">
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
-                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
-                  </div>
-                </div>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
-        )}
-      </div>
-      
-      {/* Input Area */}
-      <div className="border-t border-gray-200 dark:border-gray-600 p-2 bg-gray-50 dark:bg-gray-700">
-        <div className="flex gap-1">
-          <Input
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Type workflow request..."
-            className="flex-1 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-xs h-8"
-            aria-label="Chat input for workflow request"
-          />
-          <Button 
-            onClick={() => handleSendMessage()}
-            size="sm"
-            className="bg-flow-cta hover:bg-flow-cta/90 text-white h-8 px-2"
-            aria-label="Send message"
-          >
-            <Send className="w-3 h-3" />
-          </Button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-// Waitlist Signup Form
-function WaitlistForm() {
-  const [email, setEmail] = useState("")
+// Contact Form Component
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    description: '',
+    budget: '$2K'
+  })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email) {
-      setSubmitted(true)
-      // In production, send to your backend
-      console.log("Waitlist signup:", email)
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        const error = await response.json()
+        alert('Failed to submit form: ' + (error.error || 'Unknown error'))
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      alert('Failed to submit form. Please try again.')
     }
   }
 
   if (submitted) {
     return (
-      <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 text-center">
-        <Check className="w-8 h-8 text-green-600 dark:text-green-400 mx-auto mb-2" />
-        <p className="text-green-700 dark:text-green-300 font-medium">You're on the list!</p>
-        <p className="text-green-600 dark:text-green-400 text-sm">We'll notify you when beta spots open.</p>
+      <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-8 text-center max-w-2xl mx-auto">
+        <Check className="w-12 h-12 text-green-600 dark:text-green-400 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-green-700 dark:text-green-300 mb-2">Thank You!</h3>
+        <p className="text-green-600 dark:text-green-400">We'll get back to you within 24 hours to discuss your workflow needs.</p>
       </div>
     )
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 max-w-md mx-auto">
-      <Input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email for early access"
-        required
-        className="flex-1 bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
-        aria-label="Email for waitlist"
-      />
+    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Name</label>
+        <Input
+          id="name"
+          type="text"
+          value={formData.name}
+          onChange={(e) => setFormData({...formData, name: e.target.value})}
+          required
+          className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Email</label>
+        <Input
+          id="email"
+          type="email"
+          value={formData.email}
+          onChange={(e) => setFormData({...formData, email: e.target.value})}
+          required
+          className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="description" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Describe your automation need</label>
+        <textarea
+          id="description"
+          value={formData.description}
+          onChange={(e) => setFormData({...formData, description: e.target.value})}
+          required
+          rows={5}
+          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-white"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="budget" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Budget Range</label>
+        <select
+          id="budget"
+          value={formData.budget}
+          onChange={(e) => setFormData({...formData, budget: e.target.value})}
+          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-white"
+        >
+          <option value="$2K">$2,000</option>
+          <option value="$5K">$5,000</option>
+          <option value="$10K+">$10,000+</option>
+        </select>
+      </div>
+      
       <Button 
         type="submit"
-        className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold px-6"
+        className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-3 text-lg"
       >
-        Join Waitlist
+        Submit Request
       </Button>
     </form>
   )
 }
 
-// Testimonial Card Component
-function TestimonialCard({ quote, author, role }: { quote: string; author: string; role: string }) {
-  return (
-    <div className="w-80 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
-      <div className="flex mb-2">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-        ))}
-      </div>
-      <p className="text-flow-text-light dark:text-flow-text-dark text-sm mb-3">"{quote}"</p>
-      <p className="text-flow-gray-600 dark:text-flow-gray-300 text-xs">
-        <span className="font-medium">{author}</span>, {role}
-      </p>
-    </div>
-  )
-}
-
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-flow-bg-light dark:bg-flow-bg-dark text-flow-text-light dark:text-flow-text-dark">
-      {/* // Contrast checked with WebAIM, meets 4.5:1 */}
-        
-        {/* Theme Toggle - top-right */}
-        <div className="absolute top-4 right-6 md:right-8 z-50">
-          <ThemeToggle />
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white">
+      
+      {/* Theme Toggle */}
+      <div className="absolute top-4 right-6 md:right-8 z-50">
+        <ThemeToggle />
+      </div>
+
+      {/* Header */}
+      <header className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
+        <div className="container mx-auto px-6 py-6">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-4">
+              <img 
+                src="/flow-viber-logo.png" 
+                alt="FlowViber"
+                className="h-12 w-auto dark:hidden"
+              />
+              <img 
+                src="/flow-viber-white-logo.png" 
+                alt="FlowViber"
+                className="h-12 w-auto hidden dark:block"
+              />
+              <div>
+                <h1 className="text-2xl font-bold">FlowViber</h1>
+                <p className="text-sm text-gray-600 dark:text-slate-300">Production-Ready n8n Workflows That Actually Work</p>
+              </div>
+            </div>
+            <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold">
+              Get Your Workflow Built - $2000
+            </Button>
+          </div>
         </div>
-        
+      </header>
 
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-700 pt-24 pb-16">
-        
-          <div className="container mx-auto px-6">
-            <div className="text-center max-w-4xl mx-auto">
-              {/* Logo */}
-              <div className="flex justify-center mb-6">
-                <div className="h-16 md:h-20 flex items-center justify-center">
-                  <img 
-                    src="/flow-viber-logo.png" 
-                    alt="Flow Viber - AI Workflow Builder"
-                    className="h-full w-auto object-contain dark:hidden"
-                  />
-                  <img 
-                    src="/flow-viber-white-logo.png" 
-                    alt="Flow Viber - AI Workflow Builder"
-                    className="h-full w-auto object-contain hidden dark:block"
-                  />
-                </div>
-              </div>
-
-              {/* Hero Headline - specific text as required */}
-              <h1 className="text-4xl font-bold mb-4 text-flow-text-light dark:text-flow-text-dark">
-                Build Interoperable Workflows Across n8n, Make, and Finance Apps—Just Chat
-              </h1>
-              
-              {/* Subheadline */}
-              <p className="text-lg text-flow-gray-600 dark:text-flow-gray-300 mb-4">
-                Create hybrid automations <span className="font-semibold text-flow-cta">3x faster</span> with guided natural language prompts, no setup hassle.
-              </p>
-
-              {/* Differentiator */}
-              <p className="text-sm text-flow-gray-500 dark:text-flow-gray-400 mb-8">
-                Unlike n8n's single-platform builder, Flow Viber orchestrates n8n, Make, Pabbly, and Stripe in one chatbox.
-              </p>
-
-              {/* Waitlist Form */}
-              <div className="mb-8">
-                <p className="text-sm text-flow-gray-600 dark:text-flow-gray-300 mb-4 text-center">
-                  Join the beta waitlist for early access:
-                </p>
-                <WaitlistForm />
-              </div>
-            </div>
-            
-            {/* Chat Demo - much wider for desktop */}
-            <div id="demo" className="flex justify-center mb-16">
-              <div className="w-[200px] h-[300px] md:w-[900px] md:h-[600px]">
-                <InteractiveChatDemo />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Flow Viber Section */}
-        <section className="py-16 text-center">
-          <div className="container mx-auto px-6">
-            <h2 className="text-2xl font-bold text-flow-text-light dark:text-flow-text-dark mb-4">
-              Why Flow Viber?
-            </h2>
-            <p className="text-xl text-flow-text-light dark:text-flow-text-dark mb-8">
-              Simplicity Meets Power—One Chatbox for All Your Tools.
-            </p>
-          </div>
-        </section>
-
-        {/* Specialized Agents Section - 3-column grid as specified */}
-        <section className="py-16 bg-white dark:bg-gray-800">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-flow-text-light dark:text-flow-text-dark mb-4">
-                Specialized AI Agents
-              </h2>
-            </div>
-          
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* E-commerce Expert */}
-              <Card className="bg-white dark:bg-gray-800 p-4">
-                <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center mb-4">
-                    <Bot className="w-6 h-6 !text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 text-flow-text-light dark:text-flow-text-dark">E-commerce Expert</h3>
-                  <p className="text-sm text-flow-gray-600 dark:text-flow-gray-300">
-                    Handles Shopify via n8n + payments via Stripe, all in one chat.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Marketing Automation */}
-              <Card className="bg-white dark:bg-gray-800 p-4">
-                <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                    <TrendingUp className="w-6 h-6 !text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 text-flow-text-light dark:text-flow-text-dark">Marketing Automation</h3>
-                  <p className="text-sm text-flow-gray-600 dark:text-flow-gray-300">
-                    Orchestrates email campaigns via Make + analytics via n8n + payment tracking via Stripe.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Finance Pro */}
-              <Card className="bg-white dark:bg-gray-800 p-4">
-                <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-green-800 rounded-lg flex items-center justify-center mb-4">
-                    <Check className="w-6 h-6 !text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 text-flow-text-light dark:text-flow-text-dark">Finance Pro</h3>
-                  <p className="text-sm text-flow-gray-600 dark:text-flow-gray-300">
-                    Automates QuickBooks + Stripe invoices via NL.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            
-            {/* Testimonial Cards */}
-            <div className="mt-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
-                <TestimonialCard 
-                  quote="Flow Viber made my e-commerce automation effortless—saved hours!"
-                  author="Jane Doe"
-                  role="E-commerce Dev"
-                />
-                <TestimonialCard 
-                  quote="Finally, I can connect multiple platforms without coding expertise."
-                  author="Mike Smith"
-                  role="Marketing Manager"
-                />
-                <TestimonialCard 
-                  quote="The AI creates better workflows than I imagined possible."
-                  author="Sarah Johnson"
-                  role="Operations Lead"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Integrations Section */}
-        <section className="py-16 bg-gray-50 dark:bg-gray-900">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-flow-text-light dark:text-flow-text-dark mb-4">
-                Platform Integrations
-              </h2>
-            </div>
-
-            {/* Horizontal flex layout */}
-            <div className="flex flex-wrap justify-center items-center gap-4 bg-white dark:bg-gray-800 p-6 rounded-lg">
-              {/* n8n - Live */}
-              <div className="flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/20 rounded-lg">
-                <div className="w-8 h-8 bg-green-500 rounded flex items-center justify-center">
-                  <Workflow className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="font-medium text-flow-text-light dark:text-flow-text-dark text-sm">n8n</p>
-                  <p className="text-xs text-green-600 dark:text-green-400">Live: JSON export</p>
-                </div>
-              </div>
-
-              {/* Make - Beta */}
-              <div className="flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/20 rounded-lg">
-                <div className="w-8 h-8 bg-orange-500 rounded flex items-center justify-center">
-                  <GitBranch className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="font-medium text-flow-text-light dark:text-flow-text-dark text-sm">Make</p>
-                  <p className="text-xs text-orange-600 dark:text-orange-400">Beta: Coming Oct 28</p>
-                </div>
-              </div>
-
-              {/* Pabbly - Beta */}
-              <div className="flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/20 rounded-lg">
-                <div className="w-8 h-8 bg-purple-500 rounded flex items-center justify-center">
-                  <Network className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="font-medium text-flow-text-light dark:text-flow-text-dark text-sm">Pabbly</p>
-                  <p className="text-xs text-orange-600 dark:text-orange-400">Beta: Coming Oct 28</p>
-                </div>
-              </div>
-
-              {/* Stripe - Beta */}
-              <div className="flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/20 rounded-lg">
-                <div className="w-8 h-8 bg-blue-500 rounded flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="font-medium text-flow-text-light dark:text-flow-text-dark text-sm">Stripe</p>
-                  <p className="text-xs text-orange-600 dark:text-orange-400">Beta: Coming Oct 28</p>
-                </div>
-              </div>
-              
-              {/* QuickBooks - Beta */}
-              <div className="flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/20 rounded-lg">
-                <div className="w-8 h-8 bg-green-500 rounded flex items-center justify-center">
-                  <FileText className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="font-medium text-flow-text-light dark:text-flow-text-dark text-sm">QuickBooks</p>
-                  <p className="text-xs text-orange-600 dark:text-orange-400">Beta: Coming Oct 28</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      {/* New Section: Why Flow Viber */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-800 dark:to-slate-900">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-slate-800 dark:to-slate-900">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="text-gray-900 dark:text-white">Why Flow Viber? </span>
-              <span className="block mt-2 bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600 bg-clip-text text-transparent">
-                Simplicity Meets Power—One Chatbox for All Your Tools
-              </span>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Stop Debugging. Start Deploying.
             </h2>
+            <p className="text-xl text-gray-600 dark:text-slate-300 mb-8">
+              We build n8n workflows that handle 500+ concurrent users, not just 5 test cases.
+            </p>
+            
+            {/* Workflow Diagram Placeholder */}
+            <div className="bg-white dark:bg-slate-800 border-2 border-dashed border-gray-300 dark:border-slate-600 rounded-lg p-12 mb-8">
+              <p className="text-gray-500 dark:text-slate-400">Workflow Diagram Placeholder</p>
+            </div>
+            
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6">
+              Book Free Consultation
+            </Button>
           </div>
+        </div>
+      </section>
 
+      {/* Problem Section */}
+      <section className="py-16 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Clock className="w-10 h-10 !text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">3x Faster Setup</h3>
-              <p className="text-gray-600 dark:text-slate-300">
-                Build complex workflows in minutes, not hours. No learning curve, no documentation diving.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Network className="w-10 h-10 !text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">True Interoperability</h3>
-              <p className="text-gray-600 dark:text-slate-300">
-                Mix and match platforms. Use n8n triggers with Make actions and Stripe payments seamlessly.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <MessageSquare className="w-10 h-10 !text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Natural Language</h3>
-              <p className="text-gray-600 dark:text-slate-300">
-                Just describe what you want. Our AI handles the technical complexity behind the scenes.
-              </p>
-            </div>
+            <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+              <CardContent className="p-6 text-center">
+                <p className="text-lg font-semibold text-red-700 dark:text-red-300">
+                  Tutorial workflows break in production
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+              <CardContent className="p-6 text-center">
+                <p className="text-lg font-semibold text-red-700 dark:text-red-300">
+                  Spending nights debugging data mapping errors
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+              <CardContent className="p-6 text-center">
+                <p className="text-lg font-semibold text-red-700 dark:text-red-300">
+                  Workflows fail at scale with real data
+                </p>
+              </CardContent>
+            </Card>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 max-w-4xl mx-auto shadow-xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
-              <div>
-                <h4 className="text-2xl font-bold mb-4 !text-white">For Developers</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-white" />
-                    <span className="!text-white">Export clean, validated JSON ready for production</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-white" />
-                    <span className="!text-white">Built-in error handling and retry logic</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-white" />
-                    <span className="!text-white">Version control and rollback support</span>
-                  </li>
-                </ul>
+      {/* Solution Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-4xl font-bold text-center mb-12">We build production-tested workflows with:</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">Proper error handling</h4>
+                  <p className="text-gray-600 dark:text-slate-300">Every workflow includes comprehensive error catching and retry logic</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-4 !text-white">For Business Users</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-white" />
-                    <span className="!text-white">No coding required, ever</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-white" />
-                    <span className="!text-white">AI guides you through each step</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-white" />
-                    <span className="!text-white">Test workflows before deploying</span>
-                  </li>
-                </ul>
+              
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">Scale testing (100+ concurrent executions)</h4>
+                  <p className="text-gray-600 dark:text-slate-300">We stress test your workflows with real-world load before delivery</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">Data validation and mapping</h4>
+                  <p className="text-gray-600 dark:text-slate-300">Robust data transformation that handles edge cases and malformed data</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">30-day support included</h4>
+                  <p className="text-gray-600 dark:text-slate-300">We stand by our work with a full month of post-deployment support</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-50 dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800 py-12">
+      {/* Pricing Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company */}
-            <div>
-              <h4 className="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/about" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <h3 className="text-4xl font-bold text-center mb-12">Simple, Transparent Pricing</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+            <Card className="bg-white dark:bg-slate-700 border-gray-200 dark:border-slate-600">
+              <CardContent className="p-8">
+                <h4 className="text-2xl font-bold mb-2">Simple Workflow</h4>
+                <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$2,000</p>
+                <p className="text-gray-600 dark:text-slate-300 mb-6">5-7 days delivery</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Single integration workflow</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Error handling & validation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Scale tested</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>30-day support</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gradient-to-b from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-300 dark:border-blue-700 shadow-xl">
+              <CardContent className="p-8">
+                <h4 className="text-2xl font-bold mb-2">Complex Workflow</h4>
+                <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$5,000</p>
+                <p className="text-gray-600 dark:text-slate-300 mb-6">10-14 days delivery</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Multiple integrations</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Advanced error handling</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Custom logic & transformations</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>Scale tested (500+ concurrent)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+                    <span>30-day support</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <p className="text-center text-xl text-gray-600 dark:text-slate-300">
+            Free 30-minute consultation to scope your needs
+          </p>
+        </div>
+      </section>
 
-            {/* Product */}
-            <div>
-              <h4 className="font-bold text-gray-900 dark:text-white mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/features" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/integrations" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Integrations
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/roadmap" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Roadmap
-                  </Link>
-                </li>
-              </ul>
+      {/* Process Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
+        <div className="container mx-auto px-6">
+          <h3 className="text-4xl font-bold text-center mb-12">Our Process</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+              <h4 className="text-lg font-semibold mb-2">30-min consultation call</h4>
+              <p className="text-gray-600 dark:text-slate-300">Understand your needs and scope the project</p>
             </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="font-bold text-gray-900 dark:text-white mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/docs" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tutorials" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Tutorials
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/api" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    API Reference
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/community" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Community
-                  </Link>
-                </li>
-              </ul>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+              <h4 className="text-lg font-semibold mb-2">We build your workflow</h4>
+              <p className="text-gray-600 dark:text-slate-300">Expert development with best practices</p>
             </div>
-
-            {/* Legal */}
-            <div>
-              <h4 className="font-bold text-gray-900 dark:text-white mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/privacy" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/security" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    Security
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gdpr" className="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    GDPR
-                  </Link>
-                </li>
-              </ul>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+              <h4 className="text-lg font-semibold mb-2">Test with real data at scale</h4>
+              <p className="text-gray-600 dark:text-slate-300">Stress testing with production-like conditions</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+              <h4 className="text-lg font-semibold mb-2">Deploy + 30 days support</h4>
+              <p className="text-gray-600 dark:text-slate-300">Smooth deployment and ongoing assistance</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-600 dark:text-slate-300 mb-4 md:mb-0">
-                © 2025 Flow Viber. All rights reserved.
-              </p>
-              <div className="flex gap-4">
-                <Lock className="w-5 h-5 text-gray-600 dark:text-slate-300" aria-label="Secure platform" />
-                <Shield className="w-5 h-5 text-gray-600 dark:text-slate-300" aria-label="Enterprise security" />
-                <Globe className="w-5 h-5 text-gray-600 dark:text-slate-300" aria-label="Global availability" />
-              </div>
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-6">
+          <h3 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="bg-gray-50 dark:bg-slate-700">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 dark:text-slate-300 mb-4 italic">
+                  "Placeholder for testimonial. Add your real client testimonial here."
+                </p>
+                <p className="font-semibold">Client Name</p>
+                <p className="text-sm text-gray-600 dark:text-slate-400">Company, Role</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gray-50 dark:bg-slate-700">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 dark:text-slate-300 mb-4 italic">
+                  "Placeholder for testimonial. Add your real client testimonial here."
+                </p>
+                <p className="font-semibold">Client Name</p>
+                <p className="text-sm text-gray-600 dark:text-slate-400">Company, Role</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gray-50 dark:bg-slate-700">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 dark:text-slate-300 mb-4 italic">
+                  "Placeholder for testimonial. Add your real client testimonial here."
+                </p>
+                <p className="font-semibold">Client Name</p>
+                <p className="text-sm text-gray-600 dark:text-slate-400">Company, Role</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
+        <div className="container mx-auto px-6">
+          <h3 className="text-4xl font-bold text-center mb-4">Get Started Today</h3>
+          <p className="text-xl text-center text-gray-600 dark:text-slate-300 mb-12">
+            Tell us about your automation needs
+          </p>
+          
+          <ContactForm />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700 py-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
+              <a href="mailto:contact@flowviber.com" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                <Mail className="w-5 h-5" />
+                contact@flowviber.com
+              </a>
+              
+              <a href="tel:+1234567890" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                <Phone className="w-5 h-5" />
+                Schedule Call
+              </a>
+              
+              <a href="#" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                <Calendar className="w-5 h-5" />
+                Book on Calendly
+              </a>
             </div>
+            
+            <p className="text-gray-600 dark:text-slate-300">
+              © 2025 FlowViber. Production-Ready n8n Workflows.
+            </p>
           </div>
         </div>
       </footer>
