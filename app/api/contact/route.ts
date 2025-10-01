@@ -66,12 +66,10 @@ Sent from FlowViber Contact Form
     // Option 2: Send email via Resend (if API key is configured)
     if (process.env.RESEND_API_KEY) {
       try {
-        // Using luca.fritschij@gmail.com as recipient until domain propagates through Resend
-        // This will be automatically switched to contact@flowviber.io once domain sync completes
         const result = await resend.emails.send({
           from: 'FlowViber <onboarding@resend.dev>',
           to: 'luca.fritschij@gmail.com',
-          subject: `[FlowViber Contact Form] New Workflow Request from ${name}`,
+          subject: `New Workflow Request from ${name}`,
           text: emailContent,
           replyTo: email,
         })
