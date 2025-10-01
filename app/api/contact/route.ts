@@ -68,7 +68,7 @@ Sent from FlowViber Contact Form
       try {
         await resend.emails.send({
           from: 'FlowViber <onboarding@resend.dev>',
-          to: process.env.CONTACT_EMAIL || 'delivered@resend.dev',
+          to: 'contact@flowviber.io',
           subject: `New Workflow Request from ${name}`,
           text: emailContent,
           replyTo: email,

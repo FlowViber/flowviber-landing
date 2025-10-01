@@ -180,8 +180,13 @@ export default function LandingPage() {
                 <p className="text-sm text-gray-600 dark:text-slate-300">Production-Ready n8n Workflows That Actually Work</p>
               </div>
             </div>
-            <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold">
-              Get Your Workflow Built - $2000
+            <Button 
+              asChild
+              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold"
+            >
+              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
+                Get Your Workflow Built - $2000
+              </a>
             </Button>
           </div>
         </div>
@@ -222,8 +227,14 @@ export default function LandingPage() {
               </DialogContent>
             </Dialog>
             
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6">
-              Book Free Consultation
+            <Button 
+              asChild
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6"
+            >
+              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
+                Book Free Consultation
+              </a>
             </Button>
           </div>
         </div>
@@ -481,9 +492,9 @@ export default function LandingPage() {
                 contact@flowviber.com
               </a>
               
-              <a href="tel:+1234567890" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+              <a href="tel:+31644089354" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
                 <Phone className="w-5 h-5" />
-                Schedule Call
+                +31 6 4408 9354
               </a>
               
               <a href="#" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
