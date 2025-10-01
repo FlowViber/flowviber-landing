@@ -421,7 +421,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-6">
           <h3 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             <Card className="bg-gray-50 dark:bg-slate-700">
               <CardContent className="p-6">
                 <div className="flex mb-4">
@@ -434,21 +434,6 @@ export default function LandingPage() {
                 </p>
                 <p className="font-semibold">Luca F.</p>
                 <p className="text-sm text-gray-600 dark:text-slate-400">Ring Logic AI, BD</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gray-50 dark:bg-slate-700">
-              <CardContent className="p-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 dark:text-slate-300 mb-4 italic">
-                  "Placeholder for testimonial. Add your real client testimonial here."
-                </p>
-                <p className="font-semibold">Client Name</p>
-                <p className="text-sm text-gray-600 dark:text-slate-400">Company, Role</p>
               </CardContent>
             </Card>
           </div>
