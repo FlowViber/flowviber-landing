@@ -68,7 +68,7 @@ Sent from FlowViber Contact Form
       try {
         const result = await resend.emails.send({
           from: 'FlowViber <onboarding@resend.dev>',
-          to: 'contact@flowviber.io',
+          to: 'luca.fritschij@gmail.com', // Temporary: Using your email until domain is verified
           subject: `New Workflow Request from ${name}`,
           text: emailContent,
           replyTo: email,
