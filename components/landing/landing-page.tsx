@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog"
 import { 
   Check,
   Star,
@@ -198,13 +199,28 @@ export default function LandingPage() {
             </p>
             
             {/* Workflow Diagram */}
-            <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-4 mb-8 shadow-lg">
-              <img 
-                src="/workflow-diagram.png" 
-                alt="n8n Workflow Diagram Example"
-                className="w-full h-auto rounded"
-              />
-            </div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button 
+                  className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-4 mb-8 shadow-lg cursor-pointer hover:shadow-xl transition-shadow focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-full"
+                >
+                  <img 
+                    src="/workflow-diagram.png" 
+                    alt="n8n Workflow Diagram Example"
+                    className="w-full h-auto rounded"
+                  />
+                  <p className="text-sm text-gray-500 dark:text-slate-400 mt-2 text-center">Click to view larger</p>
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-7xl w-full p-0 bg-transparent border-0 shadow-none">
+                <DialogTitle className="sr-only">n8n Workflow Diagram - Full Size</DialogTitle>
+                <img 
+                  src="/workflow-diagram.png" 
+                  alt="n8n Workflow Diagram Example - Full Size"
+                  className="w-full h-auto rounded-lg shadow-2xl"
+                />
+              </DialogContent>
+            </Dialog>
             
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6">
               Book Free Consultation
