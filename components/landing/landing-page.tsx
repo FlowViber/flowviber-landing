@@ -359,25 +359,25 @@ export default function LandingPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">1</div>
               <h4 className="text-lg font-semibold mb-2">30-min consultation call</h4>
               <p className="text-gray-600 dark:text-slate-300">Understand your needs and scope the project</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">2</div>
               <h4 className="text-lg font-semibold mb-2">We build your workflow</h4>
               <p className="text-gray-600 dark:text-slate-300">Expert development with best practices</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">3</div>
               <h4 className="text-lg font-semibold mb-2">Test with real data at scale</h4>
               <p className="text-gray-600 dark:text-slate-300">Stress testing with production-like conditions</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">4</div>
               <h4 className="text-lg font-semibold mb-2">Deploy + 30 days support</h4>
               <p className="text-gray-600 dark:text-slate-300">Smooth deployment and ongoing assistance</p>
             </div>
