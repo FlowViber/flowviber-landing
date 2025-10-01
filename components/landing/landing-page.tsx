@@ -197,9 +197,13 @@ export default function LandingPage() {
               We build n8n workflows that handle 500+ concurrent users, not just 5 test cases.
             </p>
             
-            {/* Workflow Diagram Placeholder */}
-            <div className="bg-white dark:bg-slate-800 border-2 border-dashed border-gray-300 dark:border-slate-600 rounded-lg p-12 mb-8">
-              <p className="text-gray-500 dark:text-slate-400">Workflow Diagram Placeholder</p>
+            {/* Workflow Diagram */}
+            <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-4 mb-8 shadow-lg">
+              <img 
+                src="/workflow-diagram.png" 
+                alt="n8n Workflow Diagram Example"
+                className="w-full h-auto rounded"
+              />
             </div>
             
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6">
