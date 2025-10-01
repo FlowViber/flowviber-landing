@@ -66,16 +66,20 @@ Sent from FlowViber Contact Form
     // Option 2: Send email via Resend (if API key is configured)
     if (process.env.RESEND_API_KEY) {
       try {
-        await resend.emails.send({
+        const result = await resend.emails.send({
           from: 'FlowViber <onboarding@resend.dev>',
           to: 'contact@flowviber.io',
           subject: `New Workflow Request from ${name}`,
           text: emailContent,
           replyTo: email,
         })
-        console.log('Email sent successfully via Resend')
+        console.log('Email sent successfully via Resend. Response:', JSON.stringify(result))
       } catch (emailError) {
         console.error('Resend email error:', emailError)
+        // Log the full error for debugging
+        if (emailError instanceof Error) {
+          console.error('Error details:', emailError.message)
+        }
       }
     }
 
