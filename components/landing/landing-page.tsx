@@ -184,7 +184,7 @@ export default function LandingPage() {
               asChild
               className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold"
             >
-              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="text-white">
                 Get Your Workflow Built - $2000
               </a>
             </Button>
@@ -232,7 +232,7 @@ export default function LandingPage() {
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6"
             >
-              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="text-white">
                 Book Free Consultation
               </a>
             </Button>
