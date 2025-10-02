@@ -52,45 +52,45 @@ function WorkflowSlider() {
   const workflows = [
     {
       id: 1,
+      title: "WhatsApp/Instagram AI Chatbot",
+      description: "Multi-platform AI support for WhatsApp, Instagram DMs, Facebook with conversation memory.",
+      impact: "50% reduction in support tickets, 24/7 availability",
+      imageUrl: "/workflow-diagrams/whatsapp-instagram-chatbot.png"
+    },
+    {
+      id: 2,
       title: "Lead Qualification & Auto-Outreach",
       description: "AI-powered LinkedIn lead generation with personalized email sequences. Saves 20 hours/week on prospecting.",
       impact: "80% faster lead research, 3x response rates",
       imageUrl: "/workflow-diagrams/lead-qualification.png"
     },
     {
-      id: 2,
+      id: 3,
       title: "CRM Data Sync",
       description: "Auto-sync contacts and deals between Salesforce, HubSpot, and Google Sheets. Keeps teams aligned in real-time.",
       impact: "Eliminates duplicate entries, saves 15 hours/week",
       imageUrl: "/workflow-diagrams/crm-data-sync.png"
     },
     {
-      id: 3,
+      id: 4,
       title: "AI Lead Scoring & Routing",
       description: "BANT framework qualification with multi-channel routing. Hot leads → calendar, mid → WhatsApp, cold → nurture.",
       impact: "40% higher conversion rates, instant routing",
       imageUrl: "/workflow-diagrams/ai-lead-scoring.png"
     },
     {
-      id: 4,
+      id: 5,
       title: "Social Media Scheduler",
       description: "AI-powered cross-posting to Instagram, LinkedIn, Twitter, Facebook with content optimization.",
       impact: "70% reduction in social media costs, 15 hours/week saved",
       imageUrl: "/workflow-diagrams/social-media-scheduler.png"
     },
     {
-      id: 5,
+      id: 6,
       title: "Customer Feedback Automation",
       description: "Post-purchase surveys with AI sentiment analysis. Auto-categorizes feedback in Google Sheets.",
       impact: "Prevents churn, instant insights vs. manual review",
       imageUrl: "/workflow-diagrams/customer-feedback.png"
-    },
-    {
-      id: 6,
-      title: "WhatsApp/Instagram AI Chatbot",
-      description: "Multi-platform AI support for WhatsApp, Instagram DMs, Facebook with conversation memory.",
-      impact: "50% reduction in support tickets, 24/7 availability",
-      imageUrl: "/workflow-diagrams/whatsapp-instagram-chatbot.png"
     }
   ]
 
