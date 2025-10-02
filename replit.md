@@ -2,6 +2,16 @@
 Flow Viber is an intelligent visual workflow designer for n8n automation. It provides a conversational AI interface that enables users to design and deploy n8n workflows using natural language. The application guides users through requirements gathering, workflow design, and generates deployable n8n workflow JSON, aiming to be a platform-agnostic workflow builder with specialized AI agents for various business domains.
 
 # Recent Changes
+**October 2, 2025** (SEO Enhancement):
+- **AI for Companies Section**: Added comprehensive SEO-optimized section explaining how AI workflows + AI agents work for businesses
+  * Targets high-volume keyword "AI for companies" (search intent: implementation)
+  * Explains what AI for companies means (AI-powered workflows vs. hiring)
+  * Shows 4 specific use cases: Lead Qualification AI, Customer Support AI, Content Generation AI, Data Analysis AI
+  * Details why workflows + AI agents are essential with 4 key benefits
+  * Includes ROI metrics: 50-70% cost reduction, 15-200 hours saved/month, 24/7 operations
+  * Educational content that builds trust before pricing section
+  * CTA button for "Schedule AI Workflow Consultation"
+
 **October 2, 2025**:
 - **Landing Page Enhancement**: Replaced static hero workflow diagram with interactive carousel slider
   * Added 6 high-impact n8n workflow examples with clean workflow diagram screenshots

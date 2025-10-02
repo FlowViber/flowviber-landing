@@ -435,8 +435,131 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* AI for Companies Section */}
       <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-4xl font-bold text-center mb-6">AI for Companies: How Workflows + AI Agents Transform Business Operations</h3>
+            <p className="text-xl text-gray-600 dark:text-slate-300 text-center mb-12">
+              Discover how businesses are using AI automation to eliminate repetitive work and scale operations without hiring
+            </p>
+            
+            <div className="space-y-8">
+              <div>
+                <h4 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">What is AI for Companies?</h4>
+                <p className="text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
+                  AI for companies means integrating artificial intelligence into everyday business processes through automated workflows. Instead of hiring more staff to handle growing workloads, companies use AI-powered workflows to process data, qualify leads, respond to customers, and manage operations 24/7. This approach reduces costs by 50-70% while dramatically improving response times and accuracy.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">How AI Agents Work in Business Workflows</h4>
+                <p className="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
+                  AI agents are intelligent assistants embedded directly into your business workflows. Here's how they transform operations:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
+                    <CardContent className="p-6">
+                      <h5 className="font-bold text-lg mb-2">Lead Qualification AI</h5>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        AI agents analyze LinkedIn profiles, company data, and email responses to instantly qualify leads using BANT criteria. They route hot leads to your calendar, mid-tier to WhatsApp, and cold leads to nurture sequences—all automatically.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
+                    <CardContent className="p-6">
+                      <h5 className="font-bold text-lg mb-2">Customer Support AI</h5>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        AI chatbots on WhatsApp, Instagram, and Facebook handle common questions 24/7 with conversation memory. They escalate complex issues to human agents with full context, reducing support tickets by 50% while improving satisfaction.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
+                    <CardContent className="p-6">
+                      <h5 className="font-bold text-lg mb-2">Content Generation AI</h5>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        AI agents create personalized email sequences, social media posts, and follow-up messages based on customer data and behavior patterns. What used to take 20 hours/week now runs automatically with better personalization.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
+                    <CardContent className="p-6">
+                      <h5 className="font-bold text-lg mb-2">Data Analysis AI</h5>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        AI agents analyze customer feedback sentiment, categorize support tickets, extract invoice data from PDFs, and generate business insights—transforming unstructured data into actionable intelligence without manual review.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Why Workflows + AI Agents Are Essential for Modern Companies</h4>
+                <p className="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
+                  Traditional AI tools exist in isolation. Workflow automation connects AI agents to your entire business ecosystem:
+                </p>
+                <ul className="space-y-3 text-lg text-gray-700 dark:text-slate-300">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <span><strong>Cross-platform integration:</strong> AI agents pull data from LinkedIn, enrich it with Apollo.io, analyze it with GPT-4, and push qualified leads to your CRM—all in one automated flow</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <span><strong>Intelligent decision-making:</strong> Workflows route data to different AI agents based on conditions (hot leads get personal emails, cold leads get nurture campaigns)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <span><strong>24/7 operations:</strong> AI workflows run continuously, processing leads, answering customers, and syncing data while your team sleeps</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <span><strong>Scalability without hiring:</strong> Handle 10x more leads, customers, or transactions without adding headcount—workflows scale instantly</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-8">
+                <h4 className="text-2xl font-bold mb-4">Real ROI from AI Workflow Automation</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50-70%</p>
+                    <p className="text-gray-700 dark:text-slate-300">Cost reduction vs. hiring</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">15-200hrs</p>
+                    <p className="text-gray-700 dark:text-slate-300">Saved per month per workflow</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">24/7</p>
+                    <p className="text-gray-700 dark:text-slate-300">Uninterrupted operations</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <p className="text-xl text-gray-700 dark:text-slate-300 mb-6">
+                  Ready to implement AI for your company? We build production-ready AI workflows that integrate with your existing tools and scale with your business.
+                </p>
+                <Button 
+                  asChild
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6"
+                >
+                  <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
+                    Schedule AI Workflow Consultation
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-50 dark:bg-slate-900">
         <div className="container mx-auto px-6">
           <h3 className="text-4xl font-bold text-center mb-12">Simple, Transparent Pricing</h3>
           
