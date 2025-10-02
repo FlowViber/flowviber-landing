@@ -88,38 +88,10 @@ function WorkflowSlider() {
     },
     {
       id: 6,
-      title: "Invoice Processing OCR",
-      description: "Scans PDF invoices with Mistral OCR + GPT-4, extracts data to QuickBooks. Zero manual entry.",
-      impact: "95% faster processing, 20 hours/week saved",
-      embedUrl: "https://n8n.io/workflows/4331-automated-invoice-processing-with-mistral-ocr-gpt-4o-mini/"
-    },
-    {
-      id: 7,
-      title: "Financial Reporting",
-      description: "Automated monthly reports with SQL + Gemini AI. Real-time dashboards delivered via email.",
-      impact: "12 hours/month → 30 minutes, zero calculation errors",
-      embedUrl: "https://n8n.io/workflows/3617-generate-monthly-financial-reports-with-gemini-ai-sql-and-outlook/"
-    },
-    {
-      id: 8,
-      title: "Expense Approval Automation",
-      description: "AI-powered CFO-level expense analysis. Flags suspicious expenses with detailed reasoning.",
-      impact: "Instant reimbursements vs. 2-week delays",
-      embedUrl: "https://n8n.io/workflows/4576-automated-expense-approval-system-with-gpt-4-airtable-and-pinecone-vector-db/"
-    },
-    {
-      id: 9,
-      title: "IT Incident Management",
-      description: "Alert → ticket creation → diagnostics → team notification. Automated escalation workflow.",
-      impact: "200 hours/month saved (Delivery Hero case study)",
-      embedUrl: "https://n8n.io/workflows/7575-automate-incident-reporting-and-alerts-with-forms-google-sheets-and-gmail/"
-    },
-    {
-      id: 10,
       title: "WhatsApp/Instagram AI Chatbot",
       description: "Multi-platform AI support for WhatsApp, Instagram DMs, Facebook with conversation memory.",
       impact: "50% reduction in support tickets, 24/7 availability",
-      embedUrl: "https://n8n.io/workflows/6632-auto-respond-to-instagram-facebook-and-whatsapp-with-llama-32/"
+      imageUrl: "/workflow-diagrams/whatsapp-instagram-chatbot.png"
     }
   ]
 
@@ -163,21 +135,12 @@ function WorkflowSlider() {
                       <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold">💡 {workflow.impact}</p>
                     </div>
                     <div className="aspect-video bg-gray-100 dark:bg-slate-900 rounded-lg overflow-hidden">
-                      {'imageUrl' in workflow ? (
-                        <img
-                          src={workflow.imageUrl}
-                          alt={`${workflow.title} workflow diagram`}
-                          className="w-full h-full object-contain"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <iframe
-                          src={workflow.embedUrl}
-                          className="w-full h-full border-0"
-                          title={workflow.title}
-                          loading="lazy"
-                        />
-                      )}
+                      <img
+                        src={workflow.imageUrl}
+                        alt={`${workflow.title} workflow diagram`}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
                     </div>
                   </CardContent>
                 </Card>
