@@ -56,35 +56,35 @@ function WorkflowSlider() {
       title: "Lead Qualification & Auto-Outreach",
       description: "AI-powered LinkedIn lead generation with personalized email sequences. Saves 20 hours/week on prospecting.",
       impact: "80% faster lead research, 3x response rates",
-      embedUrl: "https://n8n.io/workflows/6027-ai-powered-lead-generation-system-with-email-personalization-and-linkedin/"
+      imageUrl: "/workflow-diagrams/lead-qualification.png"
     },
     {
       id: 2,
       title: "CRM Data Sync",
       description: "Auto-sync contacts and deals between Salesforce, HubSpot, and Google Sheets. Keeps teams aligned in real-time.",
       impact: "Eliminates duplicate entries, saves 15 hours/week",
-      embedUrl: "https://n8n.io/workflows/5676-customer-onboarding-automation-with-hubspot-email-sequences-and-team-alerts/"
+      imageUrl: "/workflow-diagrams/crm-data-sync.png"
     },
     {
       id: 3,
       title: "AI Lead Scoring & Routing",
       description: "BANT framework qualification with multi-channel routing. Hot leads → calendar, mid → WhatsApp, cold → nurture.",
       impact: "40% higher conversion rates, instant routing",
-      embedUrl: "https://n8n.io/workflows/8773-automate-lead-qualification-and-multi-channel-follow-up-with-ai-bant/"
+      imageUrl: "/workflow-diagrams/ai-lead-scoring.png"
     },
     {
       id: 4,
       title: "Social Media Scheduler",
       description: "AI-powered cross-posting to Instagram, LinkedIn, Twitter, Facebook with content optimization.",
       impact: "70% reduction in social media costs, 15 hours/week saved",
-      embedUrl: "https://n8n.io/workflows/3066-automate-multi-platform-social-media-content-creation-with-ai/"
+      imageUrl: "/workflow-diagrams/social-media-scheduler.png"
     },
     {
       id: 5,
       title: "Customer Feedback Automation",
       description: "Post-purchase surveys with AI sentiment analysis. Auto-categorizes feedback in Google Sheets.",
       impact: "Prevents churn, instant insights vs. manual review",
-      embedUrl: "https://n8n.io/workflows/1996-ai-customer-feedback-sentiment-analysis/"
+      imageUrl: "/workflow-diagrams/customer-feedback.png"
     },
     {
       id: 6,
@@ -163,12 +163,21 @@ function WorkflowSlider() {
                       <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold">💡 {workflow.impact}</p>
                     </div>
                     <div className="aspect-video bg-gray-100 dark:bg-slate-900 rounded-lg overflow-hidden">
-                      <iframe
-                        src={workflow.embedUrl}
-                        className="w-full h-full border-0"
-                        title={workflow.title}
-                        loading="lazy"
-                      />
+                      {'imageUrl' in workflow ? (
+                        <img
+                          src={workflow.imageUrl}
+                          alt={`${workflow.title} workflow diagram`}
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <iframe
+                          src={workflow.embedUrl}
+                          className="w-full h-full border-0"
+                          title={workflow.title}
+                          loading="lazy"
+                        />
+                      )}
                     </div>
                   </CardContent>
                 </Card>
