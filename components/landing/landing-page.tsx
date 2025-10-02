@@ -56,70 +56,70 @@ function WorkflowSlider() {
       title: "Lead Qualification & Auto-Outreach",
       description: "AI-powered LinkedIn lead generation with personalized email sequences. Saves 20 hours/week on prospecting.",
       impact: "80% faster lead research, 3x response rates",
-      embedUrl: "https://n8n.io/workflows/6027-ai-powered-lead-generation-system-with-email-personalization-and-linkedin/"
+      imageUrl: "/attached_assets/stock_images/professional_busines_ad24cda4.jpg"
     },
     {
       id: 2,
       title: "CRM Data Sync",
       description: "Auto-sync contacts and deals between Salesforce, HubSpot, and Google Sheets. Keeps teams aligned in real-time.",
       impact: "Eliminates duplicate entries, saves 15 hours/week",
-      embedUrl: "https://n8n.io/workflows/5676-customer-onboarding-automation-with-hubspot-email-sequences-and-team-alerts/"
+      imageUrl: "/attached_assets/stock_images/crm_sales_automation_87058514.jpg"
     },
     {
       id: 3,
       title: "AI Lead Scoring & Routing",
       description: "BANT framework qualification with multi-channel routing. Hot leads → calendar, mid → WhatsApp, cold → nurture.",
       impact: "40% higher conversion rates, instant routing",
-      embedUrl: "https://n8n.io/workflows/8773-automate-lead-qualification-and-multi-channel-follow-up-with-ai-bant/"
+      imageUrl: "/attached_assets/stock_images/professional_busines_db5d305a.jpg"
     },
     {
       id: 4,
       title: "Social Media Scheduler",
       description: "AI-powered cross-posting to Instagram, LinkedIn, Twitter, Facebook with content optimization.",
       impact: "70% reduction in social media costs, 15 hours/week saved",
-      embedUrl: "https://n8n.io/workflows/3066-automate-multi-platform-social-media-content-creation-with-ai/"
+      imageUrl: "/attached_assets/stock_images/professional_busines_ad701a4e.jpg"
     },
     {
       id: 5,
       title: "Customer Feedback Automation",
       description: "Post-purchase surveys with AI sentiment analysis. Auto-categorizes feedback in Google Sheets.",
       impact: "Prevents churn, instant insights vs. manual review",
-      embedUrl: "https://n8n.io/workflows/1996-ai-customer-feedback-sentiment-analysis/"
+      imageUrl: "/attached_assets/stock_images/ai_chatbot_automatio_a43ffc51.jpg"
     },
     {
       id: 6,
       title: "Invoice Processing OCR",
       description: "Scans PDF invoices with Mistral OCR + GPT-4, extracts data to QuickBooks. Zero manual entry.",
       impact: "95% faster processing, 20 hours/week saved",
-      embedUrl: "https://n8n.io/workflows/4331-automated-invoice-processing-with-mistral-ocr-gpt-4o-mini/"
+      imageUrl: "/attached_assets/stock_images/professional_busines_918b174c.jpg"
     },
     {
       id: 7,
       title: "Financial Reporting",
       description: "Automated monthly reports with SQL + Gemini AI. Real-time dashboards delivered via email.",
       impact: "12 hours/month → 30 minutes, zero calculation errors",
-      embedUrl: "https://n8n.io/workflows/3617-generate-monthly-financial-reports-with-gemini-ai-sql-and-outlook/"
+      imageUrl: "/attached_assets/stock_images/crm_sales_automation_65b95977.jpg"
     },
     {
       id: 8,
       title: "Expense Approval Automation",
       description: "AI-powered CFO-level expense analysis. Flags suspicious expenses with detailed reasoning.",
       impact: "Instant reimbursements vs. 2-week delays",
-      embedUrl: "https://n8n.io/workflows/4576-automated-expense-approval-system-with-gpt-4-airtable-and-pinecone-vector-db/"
+      imageUrl: "/attached_assets/stock_images/professional_busines_6e250f42.jpg"
     },
     {
       id: 9,
       title: "IT Incident Management",
       description: "Alert → ticket creation → diagnostics → team notification. Automated escalation workflow.",
       impact: "200 hours/month saved (Delivery Hero case study)",
-      embedUrl: "https://n8n.io/workflows/7575-automate-incident-reporting-and-alerts-with-forms-google-sheets-and-gmail/"
+      imageUrl: "/attached_assets/stock_images/crm_sales_automation_4b88b53e.jpg"
     },
     {
       id: 10,
       title: "WhatsApp/Instagram AI Chatbot",
       description: "Multi-platform AI support for WhatsApp, Instagram DMs, Facebook with conversation memory.",
       impact: "50% reduction in support tickets, 24/7 availability",
-      embedUrl: "https://n8n.io/workflows/6632-auto-respond-to-instagram-facebook-and-whatsapp-with-llama-32/"
+      imageUrl: "/attached_assets/stock_images/ai_chatbot_automatio_e3403c2c.jpg"
     }
   ]
 
@@ -163,10 +163,10 @@ function WorkflowSlider() {
                       <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold">💡 {workflow.impact}</p>
                     </div>
                     <div className="aspect-video bg-gray-100 dark:bg-slate-900 rounded-lg overflow-hidden">
-                      <iframe
-                        src={workflow.embedUrl}
-                        className="w-full h-full border-0"
-                        title={workflow.title}
+                      <img
+                        src={workflow.imageUrl}
+                        alt={`${workflow.title} workflow diagram`}
+                        className="w-full h-full object-cover"
                         loading="lazy"
                       />
                     </div>
