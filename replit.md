@@ -4,11 +4,12 @@ Flow Viber is an intelligent visual workflow designer for n8n automation. It pro
 # Recent Changes
 **October 2, 2025**:
 - **Landing Page Enhancement**: Replaced static hero workflow diagram with interactive carousel slider
-  * Added 10 high-impact n8n workflow examples with embedded live previews
+  * Added 10 high-impact n8n workflow examples with clean workflow diagram images
   * Workflows include: Lead Qualification, CRM Sync, AI Lead Scoring, Social Media Automation, Customer Feedback, Invoice OCR, Financial Reporting, Expense Approval, IT Incident Management, WhatsApp/Instagram Chatbot
-  * Each slide shows workflow title, description, business impact metrics, and embedded n8n workflow iframe
+  * Each slide shows workflow title, description, business impact metrics, and professional workflow diagram visual
   * Implemented Embla Carousel with navigation arrows and dot indicators
   * Workflows selected based on real ROI data and business value (saves 15-200 hours/month per workflow)
+  * Uses clean images (no page chrome) from public/workflow-diagrams/ for fast loading and better UX
 
 **September 15, 2025**:
 - **MAJOR FIX**: Implemented comprehensive n8n node validation using real GitHub data
