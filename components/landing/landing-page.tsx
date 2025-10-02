@@ -23,8 +23,7 @@ function ThemeToggle() {
   const [isDark, setIsDark] = React.useState(false)
 
   React.useEffect(() => {
-    const theme = localStorage.getItem('theme') || 
-                 (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    const theme = localStorage.getItem('theme') || 'light'
     setIsDark(theme === 'dark')
     document.documentElement.classList.toggle('dark', theme === 'dark')
   }, [])
@@ -39,7 +38,7 @@ function ThemeToggle() {
   return (
     <Button
       onClick={toggleTheme}
-      className="h-10 px-4 bg-black/10 hover:bg-black/20 text-gray-900 border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/25 backdrop-blur-sm transition-colors"
+      className="h-10 px-4 bg-black/10 hover:bg-black/20 text-gray-700 border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/25 backdrop-blur-sm transition-colors"
       aria-label="Toggle theme"
       aria-pressed={isDark}
     >
@@ -231,7 +230,7 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Name</label>
+        <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Name</label>
         <Input
           id="name"
           type="text"
@@ -243,7 +242,7 @@ function ContactForm() {
       </div>
       
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Email</label>
+        <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Email</label>
         <Input
           id="email"
           type="email"
@@ -255,24 +254,24 @@ function ContactForm() {
       </div>
       
       <div>
-        <label htmlFor="description" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Describe your automation need</label>
+        <label htmlFor="description" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Describe your automation need</label>
         <textarea
           id="description"
           value={formData.description}
           onChange={(e) => setFormData({...formData, description: e.target.value})}
           required
           rows={5}
-          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-white"
+          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-white"
         />
       </div>
       
       <div>
-        <label htmlFor="budget" className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">Budget Range</label>
+        <label htmlFor="budget" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Budget Range</label>
         <select
           id="budget"
           value={formData.budget}
           onChange={(e) => setFormData({...formData, budget: e.target.value})}
-          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-white"
+          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-white"
         >
           <option value="$2K">$2,000</option>
           <option value="$5K">$5,000</option>
@@ -292,7 +291,7 @@ function ContactForm() {
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-700 dark:text-white">
       
       {/* Theme Toggle */}
       <div className="absolute top-4 right-6 md:right-8 z-50">
@@ -324,7 +323,7 @@ export default function LandingPage() {
               className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold"
             >
               <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
-                Get Your Workflow Built - $2000
+                Get Your Workflow Built
               </a>
             </Button>
           </div>
@@ -522,7 +521,7 @@ export default function LandingPage() {
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-8">
-                <h4 className="text-2xl font-bold mb-4">Real ROI from AI Workflow Automation</h4>
+                <h4 className="text-2xl font-bold mb-4 text-center">Real ROI from AI Workflow Automation</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                   <div>
                     <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50-70%</p>
