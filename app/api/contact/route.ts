@@ -67,8 +67,8 @@ Sent from FlowViber Contact Form
     if (process.env.RESEND_API_KEY) {
       try {
         const result = await resend.emails.send({
-          from: 'FlowViber <noreply@flowviber.io>',
-          to: 'contact@flowviber.io',
+          from: 'FlowViber <onboarding@resend.dev>',
+          to: 'luca@flowviber.io',
           subject: `New Workflow Request from ${name}`,
           text: emailContent,
           replyTo: email,
