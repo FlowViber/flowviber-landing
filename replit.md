@@ -2,6 +2,14 @@
 Flow Viber is an intelligent visual workflow designer for n8n automation. It provides a conversational AI interface that enables users to design and deploy n8n workflows using natural language. The application guides users through requirements gathering, workflow design, and generates deployable n8n workflow JSON, aiming to be a platform-agnostic workflow builder with specialized AI agents for various business domains.
 
 # Recent Changes
+**October 2, 2025**:
+- **Landing Page Enhancement**: Replaced static hero workflow diagram with interactive carousel slider
+  * Added 10 high-impact n8n workflow examples with embedded live previews
+  * Workflows include: Lead Qualification, CRM Sync, AI Lead Scoring, Social Media Automation, Customer Feedback, Invoice OCR, Financial Reporting, Expense Approval, IT Incident Management, WhatsApp/Instagram Chatbot
+  * Each slide shows workflow title, description, business impact metrics, and embedded n8n workflow iframe
+  * Implemented Embla Carousel with navigation arrows and dot indicators
+  * Workflows selected based on real ROI data and business value (saves 15-200 hours/month per workflow)
+
 **September 15, 2025**:
 - **MAJOR FIX**: Implemented comprehensive n8n node validation using real GitHub data
   * Created `lib/github-nodes.ts` with authoritative list of all n8n nodes from official repository
