@@ -27,6 +27,11 @@ export function middleware(request: NextRequest) {
     return response
   }
 
+  // Allow public access to landing page (root path)
+  if (request.nextUrl.pathname === '/') {
+    return response
+  }
+
   // Protect dashboard routes - require authentication
   if (request.nextUrl.pathname.startsWith('/dashboard')) {
     const sessionToken = request.cookies.get('next-auth.session-token')
@@ -39,8 +44,8 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Password protection for production deployment
-  if (process.env.NODE_ENV === 'production') {
+  // Password protection for app routes in production
+  if (process.env.NODE_ENV === 'production' && request.nextUrl.pathname.startsWith('/app')) {
     // Check if user is authenticated via NextAuth session cookie
     const sessionToken = request.cookies.get('next-auth.session-token')
     
@@ -79,7 +84,7 @@ export function middleware(request: NextRequest) {
       return new NextResponse('Invalid password', {
         status: 401,
         headers: {
-          'WWW-Authenticate': 'Basic realm="Flow Viber"',
+          'WWW-Authenticate': 'Basic realm="flow Viber"',
         },
       })
     }
