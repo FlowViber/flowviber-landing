@@ -5,8 +5,8 @@ export const translations = {
       ctaButton: "Get AI Automation Built"
     },
     hero: {
-      badge: "AI-Powered Business Automation",
-      title: "AI Automation Die Uw Bedrijf Transformeert",
+      badge: "AI-Powered Business Automatisering",
+      title: "AI Automatisering Die Uw Bedrijf Transformeert",
       subtitle: "Stop met tijdverspilling aan repetitieve taken. Wij bouwen op maat gemaakte AI-automatiseringen die meetbare ROI leveren in weken, niet maanden.",
       benefits: {
         fast: {
@@ -65,7 +65,7 @@ export const translations = {
     },
     problems: {
       items: [
-        "Team verdrinkt in repetitieve handmatige taken",
+        "Het team verspilt uren tijd aan handmatige taken",
         "Gemiste omzet door trage responstijden",
         "Kan niet schalen zonder meer mensen aan te nemen"
       ]
@@ -145,7 +145,7 @@ export const translations = {
     },
     privacy: {
       badge: "Jouw Data Blijft In Europa",
-      title: "Privacy-First AI Automation",
+      title: "Privacy-First AI Automatisering",
       subtitle: "Wij begrijpen de zorgen over gegevensprivacy. Standaard blijft alle data processing binnen de EU.",
       features: [
         {
