@@ -161,31 +161,41 @@ function WorkflowSlider() {
             <div key={result.id} className="flex-[0_0_100%] min-w-0">
               <div className="px-4">
                 <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700">
-                  <CardContent className="p-8">
-                    <div className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-3">
-                      {result.company}
-                    </div>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-2">The Challenge</h4>
-                      <p className="text-gray-700 dark:text-slate-300">{result.challenge}</p>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-2">AI Automation Solution</h4>
-                      <p className="text-gray-700 dark:text-slate-300">{result.solution}</p>
-                    </div>
-                    
-                    <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-                      <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-3">Results Achieved</h4>
-                      <ul className="space-y-2">
-                        {result.results.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <Check className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700 dark:text-slate-300">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  <CardContent className="p-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {/* Left Column: Company & Challenge & Solution */}
+                      <div className="space-y-4">
+                        <div>
+                          <div className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            {result.company}
+                          </div>
+                          <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 mb-1.5">The Challenge</h4>
+                          <p className="text-sm text-gray-700 dark:text-slate-300">{result.challenge}</p>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 mb-1.5">AI Automation Solution</h4>
+                          <p className="text-sm text-gray-700 dark:text-slate-300">{result.solution}</p>
+                        </div>
+                      </div>
+                      
+                      {/* Right Column: Results Achieved */}
+                      <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border border-green-200 dark:border-green-800 rounded-xl p-5">
+                        <h4 className="text-sm font-bold text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
+                          <div className="w-6 h-6 bg-green-600 dark:bg-green-500 rounded-full flex items-center justify-center">
+                            <Check className="w-4 h-4 text-white" />
+                          </div>
+                          Results Achieved
+                        </h4>
+                        <ul className="space-y-2.5">
+                          {result.results.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2.5">
+                              <Check className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm font-medium text-gray-700 dark:text-slate-300">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

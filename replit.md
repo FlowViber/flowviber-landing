@@ -2,6 +2,17 @@
 FlowViber is a professional AI automation service that builds custom business automations delivering measurable ROI. The landing page showcases real business case studies with proven results, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers ($2K-$5K). The focus is on selling business outcomes and ROI rather than technical implementation details.
 
 # Recent Changes
+**October 17, 2025** (Results Carousel Redesign):
+- **Redesigned "Real Results From Real Businesses" carousel for better space efficiency**:
+  * Changed from single-column to 2-column grid layout (left: challenge/solution, right: results)
+  * Reduced padding from p-8 to p-6 for more compact design
+  * Reduced spacing between sections (mb-1.5 instead of mb-6)
+  * Made text smaller and more efficient (text-sm, text-xs)
+  * Enhanced "Results Achieved" section with gradient background (green-to-blue)
+  * Added checkmark badge to "Results Achieved" header for visual appeal
+  * Company name now displayed as small blue badge/pill
+  * Eliminated excessive empty space while maintaining readability
+
 **October 17, 2025** (Data Privacy Section for Dutch Market):
 - **Added comprehensive EU data sovereignty section** (in Dutch):
   * Addresses Dutch concerns about data going to US-based companies
@@ -9,8 +20,9 @@ FlowViber is a professional AI automation service that builds custom business au
   * Emphasizes GDPR/AVG compliance with DPA agreements
   * Showcases self-hosted deployment options for maximum control
   * Mentions EU-based AI models (Mistral, open-source LLMs)
-  * Beautiful green-themed design with 4 key benefit cards
+  * Elegant 2-column card design with divided sections
   * Icons: MapPin (NL location), Lock (GDPR), Server (self-hosted), Database (EU AI)
+  * Green checkmark trust badge at bottom
 
 **October 17, 2025** (Hero Section Beautification):
 - **Enhanced hero section with elegant icons and modern design**:
