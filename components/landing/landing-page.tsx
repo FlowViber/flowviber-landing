@@ -576,7 +576,7 @@ export default function LandingPage() {
 
               <div className="text-center">
                 <p className="text-xl text-gray-700 dark:text-slate-300 mb-6">
-                  Ready to implement AI for your company? We build production-ready AI workflows that integrate with your existing tools and scale with your business.
+                  Ready to implement AI for your company? We build production-ready AI automation that integrates with your existing tools and scales with your business.
                 </p>
                 <Button 
                   asChild
@@ -584,7 +584,7 @@ export default function LandingPage() {
                   className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6"
                 >
                   <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
-                    Schedule AI Workflow Consultation
+                    Schedule AI Automation Consultation
                   </a>
                 </Button>
               </div>
@@ -601,21 +601,21 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
             <Card className="bg-white dark:bg-slate-700 border-gray-200 dark:border-slate-600">
               <CardContent className="p-8">
-                <h4 className="text-2xl font-bold mb-2">Simple Workflow</h4>
+                <h4 className="text-2xl font-bold mb-2">Starter Automation</h4>
                 <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$2,000</p>
-                <p className="text-gray-600 dark:text-slate-300 mb-6">5-7 days delivery</p>
+                <p className="text-gray-600 dark:text-slate-300 mb-6">1-2 weeks delivery</p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Single integration workflow</span>
+                    <span>Single AI automation task</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Error handling & validation</span>
+                    <span>Integration with 1-2 platforms</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Scale tested</span>
+                    <span>Production-ready deployment</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
@@ -627,29 +627,29 @@ export default function LandingPage() {
             
             <Card className="bg-gradient-to-b from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-300 dark:border-blue-700 shadow-xl">
               <CardContent className="p-8">
-                <h4 className="text-2xl font-bold mb-2">Complex Workflow</h4>
-                <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$5,000</p>
-                <p className="text-gray-600 dark:text-slate-300 mb-6">10-14 days delivery</p>
+                <h4 className="text-2xl font-bold mb-2">Enterprise Automation</h4>
+                <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$5,000+</p>
+                <p className="text-gray-600 dark:text-slate-300 mb-6">2-4 weeks delivery</p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Multiple integrations</span>
+                    <span>Multi-step AI automation</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Advanced error handling</span>
+                    <span>Advanced AI logic & decision-making</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Custom logic & transformations</span>
+                    <span>Custom integrations & APIs</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Scale tested (500+ concurrent)</span>
+                    <span>Enterprise-grade scalability</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>30-day support</span>
+                    <span>Dedicated support</span>
                   </li>
                 </ul>
               </CardContent>
@@ -676,14 +676,14 @@ export default function LandingPage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">2</div>
-              <h4 className="text-lg font-semibold mb-2">We build your workflow</h4>
-              <p className="text-gray-600 dark:text-slate-300">Expert development with best practices</p>
+              <h4 className="text-lg font-semibold mb-2">We build your AI automation</h4>
+              <p className="text-gray-600 dark:text-slate-300">Expert development with production-ready AI</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">3</div>
-              <h4 className="text-lg font-semibold mb-2">Test with real data at scale</h4>
-              <p className="text-gray-600 dark:text-slate-300">Stress testing with production-like conditions</p>
+              <h4 className="text-lg font-semibold mb-2">Test and optimize performance</h4>
+              <p className="text-gray-600 dark:text-slate-300">Validate results with your real business data</p>
             </div>
             
             <div className="text-center">
@@ -753,7 +753,7 @@ export default function LandingPage() {
             </div>
             
             <p className="text-gray-600 dark:text-slate-300">
-              © 2025 FlowViber. Production-Ready n8n Workflows.
+              © 2025 FlowViber. AI Automation That Delivers Results.
             </p>
           </div>
         </div>
