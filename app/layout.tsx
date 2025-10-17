@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/shared/theme-provider"
 import { NotificationProvider } from "@/components/shared/notification-dialog"
 import { ErrorBoundary } from "@/components/shared/error-boundary"
 import { Providers } from "./providers"
+import { LanguageProvider } from "@/contexts/LanguageContext"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -75,11 +76,13 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         <Providers>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-            <ErrorBoundary>
-              <NotificationProvider>
-                {children}
-              </NotificationProvider>
-            </ErrorBoundary>
+            <LanguageProvider>
+              <ErrorBoundary>
+                <NotificationProvider>
+                  {children}
+                </NotificationProvider>
+              </ErrorBoundary>
+            </LanguageProvider>
           </ThemeProvider>
         </Providers>
       </body>

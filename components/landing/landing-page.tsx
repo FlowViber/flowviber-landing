@@ -27,6 +27,9 @@ import {
   MapPin,
   Database
 } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { translations } from "@/lib/translations"
+import { LanguageToggle } from "./language-toggle"
 
 // Theme Toggle Component
 function ThemeToggle() {
@@ -59,7 +62,15 @@ function ThemeToggle() {
 
 // AI Automation Results Slider Component
 function WorkflowSlider() {
-  const automationResults = [
+  const { language } = useLanguage();
+  const t = translations[language];
+  
+  const automationResults = t.carousel.cases.map((item, index) => ({
+    id: index + 1,
+    ...item
+  }));
+  
+  const oldAutomationResults = [
     {
       id: 1,
       company: "E-commerce Retailer",
@@ -169,12 +180,12 @@ function WorkflowSlider() {
                           <div className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm font-semibold px-3 py-1 rounded-full mb-3">
                             {result.company}
                           </div>
-                          <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-1.5">The Challenge</h4>
+                          <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-1.5">{t.carousel.challenge}</h4>
                           <p className="text-base text-gray-700 dark:text-slate-300">{result.challenge}</p>
                         </div>
                         
                         <div>
-                          <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-1.5">AI Automation Solution</h4>
+                          <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-1.5">{t.carousel.solution}</h4>
                           <p className="text-base text-gray-700 dark:text-slate-300">{result.solution}</p>
                         </div>
                       </div>
@@ -185,7 +196,7 @@ function WorkflowSlider() {
                           <div className="w-6 h-6 bg-green-600 dark:bg-green-500 rounded-full flex items-center justify-center">
                             <Check className="w-4 h-4 text-white" />
                           </div>
-                          Results Achieved
+                          {t.carousel.results}
                         </h4>
                         <ul className="space-y-2.5">
                           {result.results.map((item, idx) => (
@@ -346,13 +357,11 @@ function ContactForm() {
 }
 
 export default function LandingPage() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-700 dark:text-white">
-      
-      {/* Theme Toggle */}
-      <div className="absolute top-4 right-6 md:right-8 z-50">
-        <ThemeToggle />
-      </div>
 
       {/* Header */}
       <header className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
@@ -371,17 +380,21 @@ export default function LandingPage() {
               />
               <div>
                 <h1 className="text-2xl font-bold">FlowViber</h1>
-                <p className="text-base text-gray-600 dark:text-slate-300">AI Automation That Delivers Real Results</p>
+                <p className="text-base text-gray-600 dark:text-slate-300">{t.header.tagline}</p>
               </div>
             </div>
-            <Button 
-              asChild
-              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold"
-            >
-              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
-                Get AI Automation Built
-              </a>
-            </Button>
+            <div className="flex items-center gap-3">
+              <LanguageToggle />
+              <ThemeToggle />
+              <Button 
+                asChild
+                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold hidden md:flex"
+              >
+                <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
+                  {t.header.ctaButton}
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -397,15 +410,15 @@ export default function LandingPage() {
             {/* Main headline with icon */}
             <div className="inline-flex items-center gap-3 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-6 py-3 rounded-full mb-8 border border-blue-200 dark:border-blue-800">
               <Sparkles className="w-5 h-5" />
-              <span className="font-semibold text-base">AI-Powered Business Automation</span>
+              <span className="font-semibold text-base">{t.hero.badge}</span>
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-              AI Automation That Transforms Your Business
+              {t.hero.title}
             </h2>
             
             <p className="text-xl md:text-2xl text-gray-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto">
-              Stop wasting time on repetitive tasks. We build custom AI automations that deliver <span className="font-semibold text-blue-600 dark:text-blue-400">measurable ROI in weeks</span>, not months.
+              {t.hero.subtitle}
             </p>
             
             {/* Key benefits with icons */}
@@ -415,8 +428,8 @@ export default function LandingPage() {
                   <Zap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div className="text-left">
-                  <p className="font-semibold text-gray-900 dark:text-white">Fast Results</p>
-                  <p className="text-base text-gray-600 dark:text-slate-400">ROI in 2-4 weeks</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">{t.hero.benefits.fast.title}</p>
+                  <p className="text-base text-gray-600 dark:text-slate-400">{t.hero.benefits.fast.description}</p>
                 </div>
               </div>
               
@@ -425,8 +438,8 @@ export default function LandingPage() {
                   <Clock className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div className="text-left">
-                  <p className="font-semibold text-gray-900 dark:text-white">24/7 Operation</p>
-                  <p className="text-base text-gray-600 dark:text-slate-400">Never stops working</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">{t.hero.benefits.operation.title}</p>
+                  <p className="text-base text-gray-600 dark:text-slate-400">{t.hero.benefits.operation.description}</p>
                 </div>
               </div>
               
@@ -435,15 +448,15 @@ export default function LandingPage() {
                   <TrendingUp className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
                 <div className="text-left">
-                  <p className="font-semibold text-gray-900 dark:text-white">Proven Impact</p>
-                  <p className="text-base text-gray-600 dark:text-slate-400">50-80% time saved</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">{t.hero.benefits.impact.title}</p>
+                  <p className="text-base text-gray-600 dark:text-slate-400">{t.hero.benefits.impact.description}</p>
                 </div>
               </div>
             </div>
             
             {/* AI Automation Results Slider */}
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">Real Results From Real Businesses</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">{t.carousel.title}</h3>
               <WorkflowSlider />
             </div>
             
@@ -455,13 +468,13 @@ export default function LandingPage() {
               >
                 <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white flex items-center gap-2">
                   <Rocket className="w-5 h-5" />
-                  Book Free Consultation
+                  {t.hero.cta}
                 </a>
               </Button>
               
               <div className="flex items-center gap-2 text-gray-600 dark:text-slate-400">
                 <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-                <span className="text-base">No commitment required</span>
+                <span className="text-base">{t.hero.trust}</span>
               </div>
             </div>
           </div>
@@ -472,29 +485,15 @@ export default function LandingPage() {
       <section className="py-16 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-              <CardContent className="p-6 text-center">
-                <p className="text-xl font-semibold text-red-700 dark:text-red-300">
-                  Team drowning in repetitive manual tasks
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-              <CardContent className="p-6 text-center">
-                <p className="text-xl font-semibold text-red-700 dark:text-red-300">
-                  Missing revenue from slow response times
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-              <CardContent className="p-6 text-center">
-                <p className="text-xl font-semibold text-red-700 dark:text-red-300">
-                  Can't scale without hiring more people
-                </p>
-              </CardContent>
-            </Card>
+            {t.problems.items.map((problem, index) => (
+              <Card key={index} className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
+                <CardContent className="p-6 text-center">
+                  <p className="text-xl font-semibold text-red-700 dark:text-red-300">
+                    {problem}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
