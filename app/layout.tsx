@@ -9,26 +9,26 @@ import { Providers } from "./providers"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Flow Viber - Build Interoperable Workflows Across n8n, Make, and Finance Apps",
-  description: "Create hybrid automations 3x faster with AI-guided natural language prompts. Connect n8n, Make, Pabbly, and Stripe in one chatbox - no setup hassle.",
-  keywords: ["n8n workflows", "Make automation", "Stripe integration", "QuickBooks sync", "workflow builder", "automation platform", "AI workflow designer"],
-  authors: [{ name: "Flow Viber" }],
-  creator: "Flow Viber",
-  publisher: "Flow Viber",
+  title: "FlowViber - AI Automation Services That Deliver Real ROI",
+  description: "Stop wasting time on manual tasks. We build custom AI automation that delivers measurable results in weeks. From lead qualification to customer support - automate it all.",
+  keywords: ["AI automation", "business automation", "AI for companies", "workflow automation", "AI chatbot", "lead qualification AI", "customer support automation", "AI integration"],
+  authors: [{ name: "FlowViber" }],
+  creator: "FlowViber",
+  publisher: "FlowViber",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://flow-viber.replit.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://flowviber.io'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Flow Viber - Build Interoperable Workflows Across n8n, Make, and Finance Apps",
-    description: "Create hybrid automations 3x faster with AI-guided natural language prompts. Connect n8n, Make, Pabbly, and Stripe in one chatbox - no setup hassle.",
+    title: "FlowViber - AI Automation Services That Deliver Real ROI",
+    description: "Stop wasting time on manual tasks. We build custom AI automation that delivers measurable results in weeks. From lead qualification to customer support - automate it all.",
     url: '/',
-    siteName: 'Flow Viber',
+    siteName: 'FlowViber',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -36,14 +36,14 @@ export const metadata = {
         url: '/flow-viber-logo.png',
         width: 400,
         height: 400,
-        alt: 'Flow Viber - AI Workflow Builder for n8n, Make, and Finance Apps',
+        alt: 'FlowViber - AI Automation That Delivers Real Results',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Flow Viber - Build Interoperable Workflows Across n8n, Make, and Finance Apps",
-    description: "Create hybrid automations 3x faster with AI-guided natural language prompts. Connect n8n, Make, Pabbly, and Stripe in one chatbox.",
+    title: "FlowViber - AI Automation Services That Deliver Real ROI",
+    description: "Stop wasting time on manual tasks. We build custom AI automation that delivers measurable results in weeks. 50-70% cost reduction, 24/7 operations.",
     images: ['/flow-viber-logo.png'],
     creator: '@flowviber',
   },
