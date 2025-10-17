@@ -166,22 +166,22 @@ function WorkflowSlider() {
                       {/* Left Column: Company & Challenge & Solution */}
                       <div className="space-y-4">
                         <div>
-                          <div className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                          <div className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm font-semibold px-3 py-1 rounded-full mb-3">
                             {result.company}
                           </div>
-                          <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 mb-1.5">The Challenge</h4>
-                          <p className="text-sm text-gray-700 dark:text-slate-300">{result.challenge}</p>
+                          <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-1.5">The Challenge</h4>
+                          <p className="text-base text-gray-700 dark:text-slate-300">{result.challenge}</p>
                         </div>
                         
                         <div>
-                          <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 mb-1.5">AI Automation Solution</h4>
-                          <p className="text-sm text-gray-700 dark:text-slate-300">{result.solution}</p>
+                          <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-1.5">AI Automation Solution</h4>
+                          <p className="text-base text-gray-700 dark:text-slate-300">{result.solution}</p>
                         </div>
                       </div>
                       
                       {/* Right Column: Results Achieved */}
                       <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border border-green-200 dark:border-green-800 rounded-xl p-5">
-                        <h4 className="text-sm font-bold text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
+                        <h4 className="text-base font-bold text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
                           <div className="w-6 h-6 bg-green-600 dark:bg-green-500 rounded-full flex items-center justify-center">
                             <Check className="w-4 h-4 text-white" />
                           </div>
@@ -191,7 +191,7 @@ function WorkflowSlider() {
                           {result.results.map((item, idx) => (
                             <li key={idx} className="flex items-start gap-2.5">
                               <Check className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm font-medium text-gray-700 dark:text-slate-300">{item}</span>
+                              <span className="text-base font-medium text-gray-700 dark:text-slate-300">{item}</span>
                             </li>
                           ))}
                         </ul>
@@ -371,7 +371,7 @@ export default function LandingPage() {
               />
               <div>
                 <h1 className="text-2xl font-bold">FlowViber</h1>
-                <p className="text-sm text-gray-600 dark:text-slate-300">AI Automation That Delivers Real Results</p>
+                <p className="text-base text-gray-600 dark:text-slate-300">AI Automation That Delivers Real Results</p>
               </div>
             </div>
             <Button 
@@ -397,7 +397,7 @@ export default function LandingPage() {
             {/* Main headline with icon */}
             <div className="inline-flex items-center gap-3 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-6 py-3 rounded-full mb-8 border border-blue-200 dark:border-blue-800">
               <Sparkles className="w-5 h-5" />
-              <span className="font-semibold">AI-Powered Business Automation</span>
+              <span className="font-semibold text-base">AI-Powered Business Automation</span>
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
@@ -416,7 +416,7 @@ export default function LandingPage() {
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-gray-900 dark:text-white">Fast Results</p>
-                  <p className="text-sm text-gray-600 dark:text-slate-400">ROI in 2-4 weeks</p>
+                  <p className="text-base text-gray-600 dark:text-slate-400">ROI in 2-4 weeks</p>
                 </div>
               </div>
               
@@ -426,7 +426,7 @@ export default function LandingPage() {
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-gray-900 dark:text-white">24/7 Operation</p>
-                  <p className="text-sm text-gray-600 dark:text-slate-400">Never stops working</p>
+                  <p className="text-base text-gray-600 dark:text-slate-400">Never stops working</p>
                 </div>
               </div>
               
@@ -436,7 +436,7 @@ export default function LandingPage() {
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-gray-900 dark:text-white">Proven Impact</p>
-                  <p className="text-sm text-gray-600 dark:text-slate-400">50-80% time saved</p>
+                  <p className="text-base text-gray-600 dark:text-slate-400">50-80% time saved</p>
                 </div>
               </div>
             </div>
@@ -461,7 +461,7 @@ export default function LandingPage() {
               
               <div className="flex items-center gap-2 text-gray-600 dark:text-slate-400">
                 <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-                <span className="text-sm">No commitment required</span>
+                <span className="text-base">No commitment required</span>
               </div>
             </div>
           </div>
@@ -474,7 +474,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
               <CardContent className="p-6 text-center">
-                <p className="text-lg font-semibold text-red-700 dark:text-red-300">
+                <p className="text-xl font-semibold text-red-700 dark:text-red-300">
                   Team drowning in repetitive manual tasks
                 </p>
               </CardContent>
@@ -482,7 +482,7 @@ export default function LandingPage() {
             
             <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
               <CardContent className="p-6 text-center">
-                <p className="text-lg font-semibold text-red-700 dark:text-red-300">
+                <p className="text-xl font-semibold text-red-700 dark:text-red-300">
                   Missing revenue from slow response times
                 </p>
               </CardContent>
@@ -490,7 +490,7 @@ export default function LandingPage() {
             
             <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
               <CardContent className="p-6 text-center">
-                <p className="text-lg font-semibold text-red-700 dark:text-red-300">
+                <p className="text-xl font-semibold text-red-700 dark:text-red-300">
                   Can't scale without hiring more people
                 </p>
               </CardContent>
@@ -510,7 +510,7 @@ export default function LandingPage() {
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="text-xl font-semibold mb-2">Immediate ROI (2-4 weeks)</h4>
-                  <p className="text-gray-600 dark:text-slate-300">See measurable time savings and cost reduction within the first month</p>
+                  <p className="text-lg text-gray-600 dark:text-slate-300">See measurable time savings and cost reduction within the first month</p>
                 </div>
               </div>
               
@@ -518,7 +518,7 @@ export default function LandingPage() {
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="text-xl font-semibold mb-2">24/7 operation with zero downtime</h4>
-                  <p className="text-gray-600 dark:text-slate-300">AI works around the clock, handling tasks instantly without human intervention</p>
+                  <p className="text-lg text-gray-600 dark:text-slate-300">AI works around the clock, handling tasks instantly without human intervention</p>
                 </div>
               </div>
               
@@ -526,7 +526,7 @@ export default function LandingPage() {
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="text-xl font-semibold mb-2">Seamless integration with your tools</h4>
-                  <p className="text-gray-600 dark:text-slate-300">Works with your existing CRM, email, chat platforms, and business software</p>
+                  <p className="text-lg text-gray-600 dark:text-slate-300">Works with your existing CRM, email, chat platforms, and business software</p>
                 </div>
               </div>
               
@@ -534,7 +534,7 @@ export default function LandingPage() {
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="text-xl font-semibold mb-2">Ongoing optimization and support</h4>
-                  <p className="text-gray-600 dark:text-slate-300">We stand by our work with a full month of post-deployment support</p>
+                  <p className="text-lg text-gray-600 dark:text-slate-300">We stand by our work with a full month of post-deployment support</p>
                 </div>
               </div>
             </div>
@@ -554,21 +554,21 @@ export default function LandingPage() {
             <div className="space-y-8">
               <div>
                 <h4 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">What is AI for Companies?</h4>
-                <p className="text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
+                <p className="text-xl text-gray-700 dark:text-slate-300 leading-relaxed">
                   AI for companies means integrating artificial intelligence into everyday business processes through automated workflows. Instead of hiring more staff to handle growing workloads, companies use AI-powered workflows to process data, qualify leads, respond to customers, and manage operations 24/7. This approach reduces costs by 50-70% while dramatically improving response times and accuracy.
                 </p>
               </div>
 
               <div>
                 <h4 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">How AI Agents Work in Business Workflows</h4>
-                <p className="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
+                <p className="text-xl text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
                   AI agents are intelligent assistants embedded directly into your business workflows. Here's how they transform operations:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
                     <CardContent className="p-6">
                       <h5 className="font-bold text-lg mb-2">Lead Qualification AI</h5>
-                      <p className="text-gray-600 dark:text-slate-300">
+                      <p className="text-base text-gray-600 dark:text-slate-300">
                         AI agents analyze LinkedIn profiles, company data, and email responses to instantly qualify leads using BANT criteria. They route hot leads to your calendar, mid-tier to WhatsApp, and cold leads to nurture sequences—all automatically.
                       </p>
                     </CardContent>
@@ -577,7 +577,7 @@ export default function LandingPage() {
                   <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
                     <CardContent className="p-6">
                       <h5 className="font-bold text-lg mb-2">Customer Support AI</h5>
-                      <p className="text-gray-600 dark:text-slate-300">
+                      <p className="text-base text-gray-600 dark:text-slate-300">
                         AI chatbots on WhatsApp, Instagram, and Facebook handle common questions 24/7 with conversation memory. They escalate complex issues to human agents with full context, reducing support tickets by 50% while improving satisfaction.
                       </p>
                     </CardContent>
@@ -586,7 +586,7 @@ export default function LandingPage() {
                   <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
                     <CardContent className="p-6">
                       <h5 className="font-bold text-lg mb-2">Content Generation AI</h5>
-                      <p className="text-gray-600 dark:text-slate-300">
+                      <p className="text-base text-gray-600 dark:text-slate-300">
                         AI agents create personalized email sequences, social media posts, and follow-up messages based on customer data and behavior patterns. What used to take 20 hours/week now runs automatically with better personalization.
                       </p>
                     </CardContent>
@@ -595,7 +595,7 @@ export default function LandingPage() {
                   <Card className="bg-gray-50 dark:bg-slate-700 border-gray-200 dark:border-slate-600">
                     <CardContent className="p-6">
                       <h5 className="font-bold text-lg mb-2">Data Analysis AI</h5>
-                      <p className="text-gray-600 dark:text-slate-300">
+                      <p className="text-base text-gray-600 dark:text-slate-300">
                         AI agents analyze customer feedback sentiment, categorize support tickets, extract invoice data from PDFs, and generate business insights—transforming unstructured data into actionable intelligence without manual review.
                       </p>
                     </CardContent>
@@ -605,10 +605,10 @@ export default function LandingPage() {
 
               <div>
                 <h4 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Why Workflows + AI Agents Are Essential for Modern Companies</h4>
-                <p className="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
+                <p className="text-xl text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
                   Traditional AI tools exist in isolation. Workflow automation connects AI agents to your entire business ecosystem:
                 </p>
-                <ul className="space-y-3 text-lg text-gray-700 dark:text-slate-300">
+                <ul className="space-y-3 text-xl text-gray-700 dark:text-slate-300">
                   <li className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <span><strong>Cross-platform integration:</strong> AI agents pull data from LinkedIn, enrich it with Apollo.io, analyze it with GPT-4, and push qualified leads to your CRM—all in one automated flow</span>
@@ -633,15 +633,15 @@ export default function LandingPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                   <div>
                     <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50-70%</p>
-                    <p className="text-gray-700 dark:text-slate-300">Cost reduction vs. hiring</p>
+                    <p className="text-lg text-gray-700 dark:text-slate-300">Cost reduction vs. hiring</p>
                   </div>
                   <div>
                     <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">15-200hrs</p>
-                    <p className="text-gray-700 dark:text-slate-300">Saved per month per workflow</p>
+                    <p className="text-lg text-gray-700 dark:text-slate-300">Saved per month per workflow</p>
                   </div>
                   <div>
                     <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">24/7</p>
-                    <p className="text-gray-700 dark:text-slate-300">Uninterrupted operations</p>
+                    <p className="text-lg text-gray-700 dark:text-slate-300">Uninterrupted operations</p>
                   </div>
                 </div>
               </div>
@@ -671,7 +671,7 @@ export default function LandingPage() {
           <div className="max-w-5xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 px-4 py-2 rounded-full mb-6 text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 px-4 py-2 rounded-full mb-6 text-base font-medium">
                 <Shield className="w-4 h-4" />
                 <span>Jouw Data Blijft In Europa</span>
               </div>
@@ -695,7 +695,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Nederlandse Datacenters</h4>
-                      <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
+                      <p className="text-gray-600 dark:text-slate-400 text-base leading-relaxed">
                         MCP servers draaien lokaal in Nederland. Data verlaat nooit de EU.
                       </p>
                     </div>
@@ -707,7 +707,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">100% GDPR/AVG Compliant</h4>
-                      <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
+                      <p className="text-gray-600 dark:text-slate-400 text-base leading-relaxed">
                         Volledige naleving van Europese privacywetgeving met DPA's.
                       </p>
                     </div>
@@ -722,7 +722,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Self-Hosted Deployment</h4>
-                      <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
+                      <p className="text-gray-600 dark:text-slate-400 text-base leading-relaxed">
                         On-premise optie beschikbaar. Uw servers, uw volledige controle.
                       </p>
                     </div>
@@ -734,7 +734,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Europese AI Models</h4>
-                      <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
+                      <p className="text-gray-600 dark:text-slate-400 text-base leading-relaxed">
                         Mistral AI (Frankrijk) of self-hosted open-source LLMs beschikbaar.
                       </p>
                     </div>
@@ -748,7 +748,7 @@ export default function LandingPage() {
                   <div className="flex-shrink-0 w-6 h-6 bg-green-600 dark:bg-green-500 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-gray-700 dark:text-slate-300 font-medium">
+                  <p className="text-lg text-gray-700 dark:text-slate-300 font-medium">
                     Data sovereignty gegarandeerd - Standaard EU-only processing
                   </p>
                 </div>
@@ -766,26 +766,26 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">1</div>
-              <h4 className="text-lg font-semibold mb-2">30-min consultation call</h4>
-              <p className="text-gray-600 dark:text-slate-300">Understand your needs and scope the project</p>
+              <h4 className="text-xl font-semibold mb-2">30-min consultation call</h4>
+              <p className="text-base text-gray-600 dark:text-slate-300">Understand your needs and scope the project</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">2</div>
-              <h4 className="text-lg font-semibold mb-2">We build your AI automation</h4>
-              <p className="text-gray-600 dark:text-slate-300">Expert development with production-ready AI</p>
+              <h4 className="text-xl font-semibold mb-2">We build your AI automation</h4>
+              <p className="text-base text-gray-600 dark:text-slate-300">Expert development with production-ready AI</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">3</div>
-              <h4 className="text-lg font-semibold mb-2">Test and optimize performance</h4>
-              <p className="text-gray-600 dark:text-slate-300">Validate results with your real business data</p>
+              <h4 className="text-xl font-semibold mb-2">Test and optimize performance</h4>
+              <p className="text-base text-gray-600 dark:text-slate-300">Validate results with your real business data</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 !text-white">4</div>
-              <h4 className="text-lg font-semibold mb-2">Deploy + 30 days support</h4>
-              <p className="text-gray-600 dark:text-slate-300">Smooth deployment and ongoing assistance</p>
+              <h4 className="text-xl font-semibold mb-2">Deploy + 30 days support</h4>
+              <p className="text-base text-gray-600 dark:text-slate-300">Smooth deployment and ongoing assistance</p>
             </div>
           </div>
         </div>
