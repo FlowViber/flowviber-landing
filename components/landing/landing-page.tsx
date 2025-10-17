@@ -21,7 +21,11 @@ import {
   TrendingUp,
   Clock,
   Shield,
-  Rocket
+  Rocket,
+  Lock,
+  Server,
+  MapPin,
+  Database
 } from "lucide-react"
 
 // Theme Toggle Component
@@ -646,6 +650,97 @@ export default function LandingPage() {
                   </a>
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Privacy & EU Compliance Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-slate-800 dark:via-slate-900 dark:to-green-900/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-3 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-6 py-3 rounded-full mb-6 border border-green-200 dark:border-green-800">
+                <Shield className="w-5 h-5" />
+                <span className="font-semibold">100% GDPR Compliant - Jouw Data Blijft In Europa</span>
+              </div>
+              
+              <h3 className="text-4xl font-bold mb-4">Uw Gegevens Blijven Veilig in Nederland</h3>
+              <p className="text-xl text-gray-600 dark:text-slate-300 max-w-3xl mx-auto">
+                Wij begrijpen de zorgen over gegevensprivacy. Daarom draaien wij uw AI-automatisering lokaal in Europa—geen data naar de VS tenzij u dat expliciet kiest.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <Card className="bg-white dark:bg-slate-800 border-green-200 dark:border-green-900/50">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-green-600 dark:text-green-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Lokale MCP Servers in Nederland</h4>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        Wij deployen Model Context Protocol (MCP) servers direct in Nederlandse datacenters. Uw bedrijfsgegevens verlaten nooit de EU, tenzij u specifiek een US-based AI provider kiest.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white dark:bg-slate-800 border-green-200 dark:border-green-900/50">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                      <Lock className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Volledige GDPR Compliance</h4>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        AVG-compliant architectuur met data processing agreements (DPA's). Alle verwerking voldoet aan de Europese privacywetgeving.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white dark:bg-slate-800 border-green-200 dark:border-green-900/50">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                      <Server className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Self-Hosted Optie Beschikbaar</h4>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        Voor maximale controle bieden wij self-hosted AI automation aan. Uw servers, uw data, volledige controle. On-premise deployment in uw eigen infrastructuur.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white dark:bg-slate-800 border-green-200 dark:border-green-900/50">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
+                      <Database className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Europese AI Models (Optioneel)</h4>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        Kies uit EU-based AI models zoals Mistral (Frankrijk) of self-hosted open-source LLMs. Geen afhankelijkheid van Amerikaanse techbedrijven.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-xl p-6">
+              <p className="text-center text-gray-700 dark:text-slate-300">
+                <strong className="text-green-700 dark:text-green-400">✓ Data Sovereignty Gegarandeerd:</strong> Wij respecteren uw zorgen over gegevensprivacy. Standaard blijft alle data processing binnen de EU. U behoudt volledige controle over waar uw data naartoe gaat.
+              </p>
             </div>
           </div>
         </div>

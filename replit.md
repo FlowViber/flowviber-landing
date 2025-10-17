@@ -2,6 +2,16 @@
 FlowViber is a professional AI automation service that builds custom business automations delivering measurable ROI. The landing page showcases real business case studies with proven results, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers ($2K-$5K). The focus is on selling business outcomes and ROI rather than technical implementation details.
 
 # Recent Changes
+**October 17, 2025** (Data Privacy Section for Dutch Market):
+- **Added comprehensive EU data sovereignty section** (in Dutch):
+  * Addresses Dutch concerns about data going to US-based companies
+  * Highlights local MCP (Model Context Protocol) servers in Netherlands
+  * Emphasizes GDPR/AVG compliance with DPA agreements
+  * Showcases self-hosted deployment options for maximum control
+  * Mentions EU-based AI models (Mistral, open-source LLMs)
+  * Beautiful green-themed design with 4 key benefit cards
+  * Icons: MapPin (NL location), Lock (GDPR), Server (self-hosted), Database (EU AI)
+
 **October 17, 2025** (Hero Section Beautification):
 - **Enhanced hero section with elegant icons and modern design**:
   * Added decorative gradient background with blur effects
