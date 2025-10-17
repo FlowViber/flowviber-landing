@@ -2,6 +2,17 @@
 FlowViber is a professional AI automation service that builds custom business automations delivering measurable ROI. The landing page showcases real business case studies with proven results, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers ($2K-$5K). The focus is on selling business outcomes and ROI rather than technical implementation details.
 
 # Recent Changes
+**October 17, 2025** (Bilingual Dutch/English Support):
+- **Implemented complete bilingual system with language toggle**:
+  * Dutch (Nederlands) as default language for primary Dutch/European market
+  * English as secondary language accessible via header toggle
+  * Created LanguageContext and LanguageProvider for centralized state management
+  * Built comprehensive translations.ts with all landing page content in both languages
+  * All sections fully translated: header, hero, carousel, problems, solutions, AI section, privacy, process, contact, footer
+  * Language toggle positioned in header with flag-based UI (🇳🇱 NL / 🇬🇧 EN)
+  * Language preference persisted in localStorage for better UX
+  * Clean implementation using React Context API for efficient state distribution
+
 **October 17, 2025** (Font Size Enhancement):
 - **Increased font sizes across entire landing page for better readability**:
   * Header tagline: text-sm → text-base
