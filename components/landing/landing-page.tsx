@@ -252,16 +252,21 @@ function WorkflowSlider() {
 
 // Contact Form Component
 function ContactForm() {
+  const { language } = useLanguage()
+  const t = translations[language]
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    description: '',
-    budget: '$2K'
+    company: '',
+    message: ''
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setIsSubmitting(true)
     
     try {
       const response = await fetch('/api/contact', {
@@ -281,6 +286,8 @@ function ContactForm() {
     } catch (error) {
       console.error('Form submission error:', error)
       alert('Failed to submit form. Please try again.')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -288,71 +295,94 @@ function ContactForm() {
     return (
       <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-8 text-center max-w-2xl mx-auto">
         <Check className="w-12 h-12 text-green-600 dark:text-green-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-green-700 dark:text-green-300 mb-2">Thank You!</h3>
-        <p className="text-green-600 dark:text-green-400">We'll get back to you within 24 hours to discuss your workflow needs.</p>
+        <h3 className="text-2xl font-bold text-green-700 dark:text-green-300 mb-2">{language === 'nl' ? 'Bedankt!' : 'Thank You!'}</h3>
+        <p className="text-green-600 dark:text-green-400">
+          {language === 'nl' 
+            ? 'We nemen binnen 24 uur contact met u op om uw automatiseringsbehoeften te bespreken.' 
+            : "We'll get back to you within 24 hours to discuss your automation needs."}
+        </p>
       </div>
     )
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Name</label>
-        <Input
-          id="name"
-          type="text"
-          value={formData.name}
-          onChange={(e) => setFormData({...formData, name: e.target.value})}
-          required
-          className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
-        />
-      </div>
-      
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Email</label>
-        <Input
-          id="email"
-          type="email"
-          value={formData.email}
-          onChange={(e) => setFormData({...formData, email: e.target.value})}
-          required
-          className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
-        />
-      </div>
-      
-      <div>
-        <label htmlFor="description" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Describe your automation need</label>
-        <textarea
-          id="description"
-          value={formData.description}
-          onChange={(e) => setFormData({...formData, description: e.target.value})}
-          required
-          rows={5}
-          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-white"
-        />
-      </div>
-      
-      <div>
-        <label htmlFor="budget" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">Budget Range</label>
-        <select
-          id="budget"
-          value={formData.budget}
-          onChange={(e) => setFormData({...formData, budget: e.target.value})}
-          className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-white"
+    <div className="max-w-3xl mx-auto">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">{t.contact.form.name}</label>
+            <Input
+              id="name"
+              type="text"
+              value={formData.name}
+              onChange={(e) => setFormData({...formData, name: e.target.value})}
+              required
+              className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">{t.contact.form.email}</label>
+            <Input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
+              required
+              className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
+            />
+          </div>
+        </div>
+        
+        <div>
+          <label htmlFor="company" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">{t.contact.form.company}</label>
+          <Input
+            id="company"
+            type="text"
+            value={formData.company}
+            onChange={(e) => setFormData({...formData, company: e.target.value})}
+            className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-700 dark:text-white">
+            {language === 'nl' ? 'Bericht' : 'Message'}
+          </label>
+          <textarea
+            id="message"
+            value={formData.message}
+            onChange={(e) => setFormData({...formData, message: e.target.value})}
+            required
+            rows={5}
+            placeholder={t.contact.form.message}
+            className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-white"
+          />
+        </div>
+        
+        <Button 
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-3 text-lg"
         >
-          <option value="$2K">$2,000</option>
-          <option value="$5K">$5,000</option>
-          <option value="$10K+">$10,000+</option>
-        </select>
-      </div>
+          {isSubmitting ? t.contact.form.sending : t.contact.form.submit}
+        </Button>
+      </form>
       
-      <Button 
-        type="submit"
-        className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-3 text-lg"
-      >
-        Submit Request
-      </Button>
-    </form>
+      <div className="mt-8 text-center">
+        <p className="text-gray-600 dark:text-slate-400 mb-4">{t.contact.or}</p>
+        <Button 
+          asChild
+          size="lg" 
+          className="bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white font-bold"
+        >
+          <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
+            <Calendar className="w-5 h-5 mr-2" />
+            {t.contact.calendly}
+          </a>
+        </Button>
+      </div>
+    </div>
   )
 }
 
@@ -694,9 +724,9 @@ export default function LandingPage() {
       {/* Contact Form Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-6">
-          <h3 className="text-4xl font-bold text-center mb-4">Get Started Today</h3>
+          <h3 className="text-4xl font-bold text-center mb-4">{t.contact.title}</h3>
           <p className="text-xl text-center text-gray-600 dark:text-slate-300 mb-12">
-            Tell us about your automation needs
+            {t.contact.subtitle}
           </p>
           
           <ContactForm />
@@ -718,9 +748,9 @@ export default function LandingPage() {
                 +31 6 4408 9354
               </a>
               
-              <a href="#" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
                 <Calendar className="w-5 h-5" />
-                Book on Calendly
+                {t.contact.calendly}
               </a>
             </div>
             

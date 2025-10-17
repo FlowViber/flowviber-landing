@@ -1,8 +1,8 @@
 export const translations = {
   nl: {
     header: {
-      tagline: "AI Automation That Delivers Real Results",
-      ctaButton: "Get AI Automation Built"
+      tagline: "AI Automatisering Die Echte Resultaten Levert",
+      ctaButton: "Laat AI Automatisering Bouwen"
     },
     hero: {
       badge: "AI-Powered Business Automatisering",
@@ -22,7 +22,7 @@ export const translations = {
           description: "50-80% tijdsbesparing"
         }
       },
-      cta: "Boek Gratis Consultatie",
+      cta: "Boek Gratis Consultatie Gesprek",
       trust: "Geen verplichtingen vereist"
     },
     carousel: {
@@ -140,7 +140,7 @@ export const translations = {
       },
       cta: {
         description: "Klaar om AI voor uw bedrijf te implementeren? Wij bouwen productie-klare AI automatisering die integreert met uw bestaande tools en schaalt met uw bedrijf.",
-        button: "Plan AI Automatisering Consultatie"
+        button: "Plan AI Automatisering Consultatie Gesprek"
       }
     },
     privacy: {
@@ -190,7 +190,7 @@ export const translations = {
     },
     contact: {
       title: "Klaar om Uw Bedrijf te Transformeren?",
-      subtitle: "Boek een gratis 30-minuten consultatie om te ontdekken hoe AI automatisering uw bedrijf kan laten groeien",
+      subtitle: "Boek een gratis 30-minuten consultatie gesprek om te ontdekken hoe AI automatisering uw bedrijf kan laten groeien",
       form: {
         name: "Naam",
         email: "Email",
