@@ -403,7 +403,7 @@ export default function LandingPage() {
             <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
               <CardContent className="p-6 text-center">
                 <p className="text-lg font-semibold text-red-700 dark:text-red-300">
-                  Tutorial workflows break in production
+                  Team drowning in repetitive manual tasks
                 </p>
               </CardContent>
             </Card>
@@ -411,7 +411,7 @@ export default function LandingPage() {
             <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
               <CardContent className="p-6 text-center">
                 <p className="text-lg font-semibold text-red-700 dark:text-red-300">
-                  Spending nights debugging data mapping errors
+                  Missing revenue from slow response times
                 </p>
               </CardContent>
             </Card>
@@ -419,7 +419,7 @@ export default function LandingPage() {
             <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
               <CardContent className="p-6 text-center">
                 <p className="text-lg font-semibold text-red-700 dark:text-red-300">
-                  Workflows fail at scale with real data
+                  Can't scale without hiring more people
                 </p>
               </CardContent>
             </Card>
@@ -431,37 +431,37 @@ export default function LandingPage() {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-4xl font-bold text-center mb-12">We build production-tested workflows with:</h3>
+            <h3 className="text-4xl font-bold text-center mb-12">Our AI Automation Delivers:</h3>
             
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">Proper error handling</h4>
-                  <p className="text-gray-600 dark:text-slate-300">Every workflow includes comprehensive error catching and retry logic</p>
+                  <h4 className="text-xl font-semibold mb-2">Immediate ROI (2-4 weeks)</h4>
+                  <p className="text-gray-600 dark:text-slate-300">See measurable time savings and cost reduction within the first month</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">Scale testing (100+ concurrent executions)</h4>
-                  <p className="text-gray-600 dark:text-slate-300">We stress test your workflows with real-world load before delivery</p>
+                  <h4 className="text-xl font-semibold mb-2">24/7 operation with zero downtime</h4>
+                  <p className="text-gray-600 dark:text-slate-300">AI works around the clock, handling tasks instantly without human intervention</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">Data validation and mapping</h4>
-                  <p className="text-gray-600 dark:text-slate-300">Robust data transformation that handles edge cases and malformed data</p>
+                  <h4 className="text-xl font-semibold mb-2">Seamless integration with your tools</h4>
+                  <p className="text-gray-600 dark:text-slate-300">Works with your existing CRM, email, chat platforms, and business software</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
                 <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">30-day support included</h4>
+                  <h4 className="text-xl font-semibold mb-2">Ongoing optimization and support</h4>
                   <p className="text-gray-600 dark:text-slate-300">We stand by our work with a full month of post-deployment support</p>
                 </div>
               </div>
