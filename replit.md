@@ -1,7 +1,29 @@
 # Overview
-Flow Viber is an intelligent visual workflow designer for n8n automation. It provides a conversational AI interface that enables users to design and deploy n8n workflows using natural language. The application guides users through requirements gathering, workflow design, and generates deployable n8n workflow JSON, aiming to be a platform-agnostic workflow builder with specialized AI agents for various business domains.
+FlowViber is a professional AI automation service that builds custom business automations delivering measurable ROI. The landing page showcases real business case studies with proven results, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers ($2K-$5K). The focus is on selling business outcomes and ROI rather than technical implementation details.
 
 # Recent Changes
+**October 17, 2025** (Landing Page Transformation):
+- **Complete rebrand from n8n workflows to AI automation services**:
+  * Removed all n8n mentions and workflow diagram screenshots
+  * Transformed focus from technical workflow implementation to business outcomes and ROI
+  * Updated header tagline: "AI Automation That Delivers Real Results"
+  * Updated hero section: "AI Automation That Transforms Your Business"
+- **Results Showcase Slider**: Replaced workflow diagrams with business case studies
+  * E-commerce Retailer: AI chatbot reduced support load by 80%, saved 120 hours/month
+  * B2B SaaS Company: Lead qualification AI increased conversion by 45%
+  * Marketing Agency: Content automation saved 200 hours/month
+  * Each case shows: company, challenge, solution, measurable results
+- **Updated Problem/Solution Sections**:
+  * Problems: Manual tasks, slow response times, can't scale without hiring
+  * Solutions: Immediate ROI (2-4 weeks), 24/7 operation, seamless integration
+- **Revised Pricing**:
+  * Starter Automation: $2K (1-2 weeks delivery, single AI task)
+  * Enterprise Automation: $5K+ (2-4 weeks, multi-step AI with custom integrations)
+- **SEO Optimization**:
+  * Updated metadata to focus on "AI automation", "business automation", "AI for companies"
+  * New meta description emphasizes measurable results and ROI
+  * Removed workflow-specific keywords
+- **Footer**: Changed from "Production-Ready n8n Workflows" to "AI Automation That Delivers Results"
 **October 2, 2025** (SEO Enhancement):
 - **AI for Companies Section**: Added comprehensive SEO-optimized section explaining how AI workflows + AI agents work for businesses
   * Targets high-volume keyword "AI for companies" (search intent: implementation)
