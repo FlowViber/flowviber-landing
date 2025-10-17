@@ -2,7 +2,7 @@ export const translations = {
   nl: {
     header: {
       tagline: "AI Automatisering Die Echte Resultaten Levert",
-      ctaButton: "Laat AI Automatisering Bouwen"
+      ctaButton: "Implementeer AI in uw bedrijf"
     },
     hero: {
       badge: "AI-Powered Business Automatisering",
@@ -23,7 +23,7 @@ export const translations = {
         }
       },
       cta: "Boek Gratis Consultatie Gesprek",
-      trust: "Geen verplichtingen vereist"
+      trust: "Geen verplichtingen"
     },
     carousel: {
       title: "Echte Resultaten Van Echte Bedrijven",
@@ -205,6 +205,11 @@ export const translations = {
     footer: {
       tagline: "AI Automatisering Die Resultaten Levert",
       rights: "Alle rechten voorbehouden."
+    },
+    cookies: {
+      message: "We gebruiken cookies om uw ervaring te verbeteren en om onze diensten te analyseren.",
+      accept: "Accepteren",
+      decline: "Weigeren"
     }
   },
   en: {
@@ -231,7 +236,7 @@ export const translations = {
         }
       },
       cta: "Book Free Consultation",
-      trust: "No commitment required"
+      trust: "No commitment"
     },
     carousel: {
       title: "Real Results From Real Businesses",
@@ -413,6 +418,11 @@ export const translations = {
     footer: {
       tagline: "AI Automation That Delivers Results",
       rights: "All rights reserved."
+    },
+    cookies: {
+      message: "We use cookies to improve your experience and to analyze our services.",
+      accept: "Accept",
+      decline: "Decline"
     }
   }
 };

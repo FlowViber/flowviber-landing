@@ -1,6 +1,25 @@
 # Overview
 FlowViber is a professional AI automation service that builds custom business automations, focusing on delivering measurable ROI. The landing page showcases real business case studies, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers. The primary goal is to sell business outcomes and ROI.
 
+# Recent Changes
+**October 17, 2025** (Cookie Consent & Final Polish):
+- **Cookie Consent Banner Added**:
+  * Bilingual cookie consent banner (Dutch & English)
+  * Clean bottom-bar design with Accept/Decline buttons
+  * Persisted choice in localStorage
+  * Respects language preference for messaging
+- **UI/UX Refinements**:
+  * Language toggle simplified: shows only "EN" or "NL" (not duplicated)
+  * Header CTA button updated: "Implementeer AI in uw bedrijf"
+  * Trust badge simplified: "Geen verplichtingen" (removed "vereist")
+  * English trust badge: "No commitment" (removed "required")
+
+**October 17, 2025** (Bilingual Dutch/English Support & SEO):
+- **Complete bilingual system with language toggle** - Dutch as default, English as secondary
+- **Enhanced SEO for "AI voor bedrijven" and "AI for businesses"** - Optimized meta tags, keywords, and LLM-friendly content
+- **All content fully translated** - Header, hero, carousel, forms, all sections in both languages
+- Language preference persisted in localStorage
+
 # User Preferences
 Preferred communication style: Simple, everyday language.
 

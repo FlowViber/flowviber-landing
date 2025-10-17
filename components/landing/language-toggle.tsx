@@ -13,7 +13,7 @@ export function LanguageToggle() {
       className="h-10 px-4 bg-black/10 hover:bg-black/20 text-gray-700 border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/25 backdrop-blur-sm transition-colors font-semibold"
       aria-label="Toggle language"
     >
-      {language === 'nl' ? '🇬🇧 EN' : '🇳🇱 NL'}
+      {language === 'nl' ? 'EN' : 'NL'}
     </Button>
   );
 }

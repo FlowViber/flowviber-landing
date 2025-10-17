@@ -30,6 +30,7 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext"
 import { translations } from "@/lib/translations"
 import { LanguageToggle } from "./language-toggle"
+import { CookieConsent } from "./cookie-consent"
 
 // Theme Toggle Component
 function ThemeToggle() {
@@ -760,6 +761,9 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Cookie Consent */}
+      <CookieConsent />
     </div>
   )
 }
