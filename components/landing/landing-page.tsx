@@ -593,75 +593,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-gray-50 dark:bg-slate-900">
-        <div className="container mx-auto px-6">
-          <h3 className="text-4xl font-bold text-center mb-12">Simple, Transparent Pricing</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-            <Card className="bg-white dark:bg-slate-700 border-gray-200 dark:border-slate-600">
-              <CardContent className="p-8">
-                <h4 className="text-2xl font-bold mb-2">Starter Automation</h4>
-                <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$2,000</p>
-                <p className="text-gray-600 dark:text-slate-300 mb-6">1-2 weeks delivery</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Single AI automation task</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Integration with 1-2 platforms</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Production-ready deployment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>30-day support</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gradient-to-b from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-300 dark:border-blue-700 shadow-xl">
-              <CardContent className="p-8">
-                <h4 className="text-2xl font-bold mb-2">Enterprise Automation</h4>
-                <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$5,000+</p>
-                <p className="text-gray-600 dark:text-slate-300 mb-6">2-4 weeks delivery</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Multi-step AI automation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Advanced AI logic & decision-making</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Custom integrations & APIs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Enterprise-grade scalability</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                    <span>Dedicated support</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-          
-          <p className="text-center text-xl text-gray-600 dark:text-slate-300">
-            Free 30-minute consultation to scope your needs
-          </p>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-6">
@@ -691,30 +622,6 @@ export default function LandingPage() {
               <h4 className="text-lg font-semibold mb-2">Deploy + 30 days support</h4>
               <p className="text-gray-600 dark:text-slate-300">Smooth deployment and ongoing assistance</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white dark:bg-slate-800">
-        <div className="container mx-auto px-6">
-          <h3 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h3>
-          
-          <div className="max-w-2xl mx-auto">
-            <Card className="bg-gray-50 dark:bg-slate-700">
-              <CardContent className="p-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 dark:text-slate-300 mb-4 italic">
-                  "The Flow Viber guys really saved my day. After days of trying to get the workflow to work myself, they fixed it within a day."
-                </p>
-                <p className="font-semibold">Luca F.</p>
-                <p className="text-sm text-gray-600 dark:text-slate-400">Ring Logic AI, BD</p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
