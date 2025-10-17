@@ -2,6 +2,20 @@
 FlowViber is a professional AI automation service that builds custom business automations delivering measurable ROI. The landing page showcases real business case studies with proven results, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers ($2K-$5K). The focus is on selling business outcomes and ROI rather than technical implementation details.
 
 # Recent Changes
+**October 17, 2025** (Hero Section Beautification):
+- **Enhanced hero section with elegant icons and modern design**:
+  * Added decorative gradient background with blur effects
+  * Implemented badge with Sparkles icon for "AI-Powered Business Automation"
+  * Enhanced headline with gradient text (from-gray-900 to-gray-600)
+  * Added three benefit cards with colorful icons:
+    - Zap icon (blue): Fast Results - ROI in 2-4 weeks
+    - Clock icon (purple): 24/7 Operation - Never stops working
+    - TrendingUp icon (green): Proven Impact - 50-80% time saved
+  * Enhanced CTA button with Rocket icon and shadow effects
+  * Added trust badge with Shield icon: "No commitment required"
+- **Removed pricing section** - No pricing displayed on homepage
+- **Removed testimonials section** - Cleaner, more focused page layout
+
 **October 17, 2025** (Landing Page Transformation):
 - **Complete rebrand from n8n workflows to AI automation services**:
   * Removed all n8n mentions and workflow diagram screenshots
