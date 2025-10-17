@@ -47,50 +47,74 @@ function ThemeToggle() {
   )
 }
 
-// Workflow Slider Component
+// AI Automation Results Slider Component
 function WorkflowSlider() {
-  const workflows = [
+  const automationResults = [
     {
       id: 1,
-      title: "WhatsApp/Instagram AI Chatbot",
-      description: "Multi-platform AI support for WhatsApp, Instagram DMs, Facebook with conversation memory.",
-      impact: "50% reduction in support tickets, 24/7 availability",
-      imageUrl: "/workflow-diagrams/whatsapp-instagram-chatbot.png"
+      company: "E-commerce Retailer",
+      challenge: "Customer support overwhelmed with 500+ daily messages across WhatsApp, Instagram, and Facebook",
+      solution: "AI chatbot handling common inquiries with conversation memory",
+      results: [
+        "50% reduction in support tickets",
+        "24/7 customer support availability",
+        "Saved $8,000/month in support costs"
+      ]
     },
     {
       id: 2,
-      title: "Lead Qualification & Auto-Outreach",
-      description: "AI-powered LinkedIn lead generation with personalized email sequences. Saves 20 hours/week on prospecting.",
-      impact: "80% faster lead research, 3x response rates",
-      imageUrl: "/workflow-diagrams/lead-qualification.png"
+      company: "B2B Sales Agency",
+      challenge: "Sales team spending 20 hours/week manually researching and qualifying leads",
+      solution: "AI-powered lead qualification with automatic personalized outreach",
+      results: [
+        "80% faster lead research",
+        "3x higher email response rates",
+        "20 hours/week saved per sales rep"
+      ]
     },
     {
       id: 3,
-      title: "CRM Data Sync",
-      description: "Auto-sync contacts and deals between Salesforce, HubSpot, and Google Sheets. Keeps teams aligned in real-time.",
-      impact: "Eliminates duplicate entries, saves 15 hours/week",
-      imageUrl: "/workflow-diagrams/crm-data-sync.png"
+      company: "SaaS Startup",
+      challenge: "Manual data entry across CRM, spreadsheets, and billing systems causing errors",
+      solution: "Automated data sync with AI validation and duplicate detection",
+      results: [
+        "99% reduction in data entry errors",
+        "15 hours/week saved",
+        "Real-time data across all platforms"
+      ]
     },
     {
       id: 4,
-      title: "AI Lead Scoring & Routing",
-      description: "BANT framework qualification with multi-channel routing. Hot leads → calendar, mid → WhatsApp, cold → nurture.",
-      impact: "40% higher conversion rates, instant routing",
-      imageUrl: "/workflow-diagrams/ai-lead-scoring.png"
+      company: "Marketing Agency",
+      challenge: "Managing social media for 30+ clients manually consuming entire team",
+      solution: "AI content generation and cross-platform posting automation",
+      results: [
+        "70% reduction in content costs",
+        "15 hours/week saved per client",
+        "2x increase in client capacity"
+      ]
     },
     {
       id: 5,
-      title: "Social Media Scheduler",
-      description: "AI-powered cross-posting to Instagram, LinkedIn, Twitter, Facebook with content optimization.",
-      impact: "70% reduction in social media costs, 15 hours/week saved",
-      imageUrl: "/workflow-diagrams/social-media-scheduler.png"
+      company: "Professional Services",
+      challenge: "Hot leads slipping through cracks with manual qualification process",
+      solution: "AI lead scoring with instant routing to sales calendar",
+      results: [
+        "40% higher conversion rates",
+        "Instant routing to sales team",
+        "$50K+ additional monthly revenue"
+      ]
     },
     {
       id: 6,
-      title: "Customer Feedback Automation",
-      description: "Post-purchase surveys with AI sentiment analysis. Auto-categorizes feedback in Google Sheets.",
-      impact: "Prevents churn, instant insights vs. manual review",
-      imageUrl: "/workflow-diagrams/customer-feedback.png"
+      company: "Online Retailer",
+      challenge: "Customer feedback scattered across platforms with no insights",
+      solution: "AI sentiment analysis with automatic categorization and alerts",
+      results: [
+        "Prevented 25% customer churn",
+        "Instant product issue detection",
+        "90% faster feedback response"
+      ]
     }
   ]
 
@@ -123,23 +147,35 @@ function WorkflowSlider() {
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {workflows.map((workflow) => (
-            <div key={workflow.id} className="flex-[0_0_100%] min-w-0">
+          {automationResults.map((result) => (
+            <div key={result.id} className="flex-[0_0_100%] min-w-0">
               <div className="px-4">
-                <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 overflow-hidden">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-2">{workflow.title}</h3>
-                      <p className="text-gray-600 dark:text-slate-300 mb-2">{workflow.description}</p>
-                      <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold">💡 {workflow.impact}</p>
+                <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700">
+                  <CardContent className="p-8">
+                    <div className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                      {result.company}
                     </div>
-                    <div className="aspect-video bg-gray-100 dark:bg-slate-900 rounded-lg overflow-hidden">
-                      <img
-                        src={workflow.imageUrl}
-                        alt={`${workflow.title} workflow diagram`}
-                        className="w-full h-full object-contain"
-                        loading="lazy"
-                      />
+                    
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-2">The Challenge</h4>
+                      <p className="text-gray-700 dark:text-slate-300">{result.challenge}</p>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-500 dark:text-slate-400 mb-2">AI Automation Solution</h4>
+                      <p className="text-gray-700 dark:text-slate-300">{result.solution}</p>
+                    </div>
+                    
+                    <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                      <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-3">Results Achieved</h4>
+                      <ul className="space-y-2">
+                        {result.results.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <Check className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700 dark:text-slate-300">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -152,7 +188,7 @@ function WorkflowSlider() {
       <button
         onClick={scrollPrev}
         className="absolute left-2 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors z-10"
-        aria-label="Previous workflow"
+        aria-label="Previous result"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
@@ -160,13 +196,13 @@ function WorkflowSlider() {
       <button
         onClick={scrollNext}
         className="absolute right-2 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors z-10"
-        aria-label="Next workflow"
+        aria-label="Next result"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
       <div className="flex justify-center gap-2 mt-6">
-        {workflows.map((_, index) => (
+        {automationResults.map((_, index) => (
           <button
             key={index}
             onClick={() => emblaApi?.scrollTo(index)}
@@ -175,7 +211,7 @@ function WorkflowSlider() {
                 ? 'bg-blue-600 w-8' 
                 : 'bg-gray-300 dark:bg-slate-600'
             }`}
-            aria-label={`Go to workflow ${index + 1}`}
+            aria-label={`Go to result ${index + 1}`}
           />
         ))}
       </div>
@@ -315,7 +351,7 @@ export default function LandingPage() {
               />
               <div>
                 <h1 className="text-2xl font-bold">FlowViber</h1>
-                <p className="text-sm text-gray-600 dark:text-slate-300">Production-Ready n8n Workflows That Actually Work</p>
+                <p className="text-sm text-gray-600 dark:text-slate-300">AI Automation That Delivers Real Results</p>
               </div>
             </div>
             <Button 
@@ -323,7 +359,7 @@ export default function LandingPage() {
               className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold"
             >
               <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
-                Get Your Workflow Built
+                Get AI Automation Built
               </a>
             </Button>
           </div>
@@ -335,15 +371,15 @@ export default function LandingPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              Stop Debugging. Start Deploying.
+              AI Automation That Transforms Your Business
             </h2>
             <p className="text-xl text-gray-600 dark:text-slate-300 mb-12">
-              We build n8n workflows that handle 500+ concurrent users, not just 5 test cases.
+              Stop wasting time on repetitive tasks. We build custom AI automations that deliver measurable ROI in weeks, not months.
             </p>
             
-            {/* Workflow Examples Slider */}
+            {/* AI Automation Results Slider */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6">Real Workflows That Save Businesses $$$</h3>
+              <h3 className="text-2xl font-bold mb-6">Real Results From Real Businesses</h3>
               <WorkflowSlider />
             </div>
             
