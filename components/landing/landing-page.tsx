@@ -15,7 +15,13 @@ import {
   Mail,
   Calendar,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Sparkles,
+  Zap,
+  TrendingUp,
+  Clock,
+  Shield,
+  Rocket
 } from "lucide-react"
 
 // Theme Toggle Component
@@ -367,31 +373,83 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-slate-800 dark:to-slate-900">
-        <div className="container mx-auto px-6">
+      <section className="relative py-24 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/20 overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            {/* Main headline with icon */}
+            <div className="inline-flex items-center gap-3 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-6 py-3 rounded-full mb-8 border border-blue-200 dark:border-blue-800">
+              <Sparkles className="w-5 h-5" />
+              <span className="font-semibold">AI-Powered Business Automation</span>
+            </div>
+            
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
               AI Automation That Transforms Your Business
             </h2>
-            <p className="text-xl text-gray-600 dark:text-slate-300 mb-12">
-              Stop wasting time on repetitive tasks. We build custom AI automations that deliver measurable ROI in weeks, not months.
+            
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto">
+              Stop wasting time on repetitive tasks. We build custom AI automations that deliver <span className="font-semibold text-blue-600 dark:text-blue-400">measurable ROI in weeks</span>, not months.
             </p>
+            
+            {/* Key benefits with icons */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-gray-900 dark:text-white">Fast Results</p>
+                  <p className="text-sm text-gray-600 dark:text-slate-400">ROI in 2-4 weeks</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700">
+                <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-gray-900 dark:text-white">24/7 Operation</p>
+                  <p className="text-sm text-gray-600 dark:text-slate-400">Never stops working</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700">
+                <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-green-600 dark:text-green-400" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-gray-900 dark:text-white">Proven Impact</p>
+                  <p className="text-sm text-gray-600 dark:text-slate-400">50-80% time saved</p>
+                </div>
+              </div>
+            </div>
             
             {/* AI Automation Results Slider */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6">Real Results From Real Businesses</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">Real Results From Real Businesses</h3>
               <WorkflowSlider />
             </div>
             
-            <Button 
-              asChild
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6"
-            >
-              <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white">
-                Book Free Consultation
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                asChild
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all"
+              >
+                <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer" className="!text-white flex items-center gap-2">
+                  <Rocket className="w-5 h-5" />
+                  Book Free Consultation
+                </a>
+              </Button>
+              
+              <div className="flex items-center gap-2 text-gray-600 dark:text-slate-400">
+                <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <span className="text-sm">No commitment required</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
