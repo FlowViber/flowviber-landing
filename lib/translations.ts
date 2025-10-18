@@ -5,25 +5,82 @@ export const translations = {
       ctaButton: "Implementeer AI in uw bedrijf"
     },
     hero: {
-      badge: "AI-Powered Business Automatisering",
-      title: "AI Automatisering Die Uw Bedrijf Transformeert",
-      subtitle: "Stop met tijdverspilling aan repetitieve taken. Wij bouwen op maat gemaakte AI-automatiseringen die meetbare ROI leveren in weken, niet maanden.",
-      benefits: {
-        fast: {
-          title: "Snelle Resultaten",
-          description: "ROI in 2-4 weken"
-        },
-        operation: {
-          title: "24/7 Beschikbaar",
-          description: "Werkt altijd door"
-        },
-        impact: {
-          title: "Bewezen Impact",
-          description: "50-80% tijdsbesparing"
-        }
-      },
+      title: "Minder ruis, meer resultaat — dankzij AI.",
+      subtitle: "Wij bouwen op maat gemaakte AI-automatiseringen die meetbare ROI leveren in weken, niet maanden.",
       cta: "Boek Gratis Consultatie Gesprek",
       trust: "Geen verplichtingen"
+    },
+    stats: {
+      title: "Bewezen Resultaten",
+      metrics: [
+        {
+          value: "50%",
+          label: "Reductie van routine handmatige taken"
+        },
+        {
+          value: "< 2 weken",
+          label: "Implementatie tijd"
+        },
+        {
+          value: "Meetbare",
+          label: "Resultaten vanaf dag één"
+        }
+      ]
+    },
+    processFlow: {
+      title: "Onze aanpak voor duurzaam succes",
+      subtitle: "Van eerste gesprek tot continue verbetering — zo werken wij",
+      steps: [
+        {
+          id: "intake",
+          title: "Intake & Process Mapping",
+          description: "We analyseren uw huidige processen en identificeren kansen voor automatisering"
+        },
+        {
+          id: "proposal",
+          title: "Voorstellen voor Implementaties",
+          description: "Op maat gemaakte oplossingen met heldere ROI en tijdlijn"
+        },
+        {
+          id: "execution",
+          title: "Executie",
+          description: "Expert ontwikkeling en naadloze integratie met uw bestaande systemen"
+        },
+        {
+          id: "monitor",
+          title: "Monitoren & Verbeteren",
+          description: "Continue optimalisatie en support voor maximale impact"
+        }
+      ]
+    },
+    testimonials: {
+      title: "Wat onze klanten zeggen",
+      items: [
+        {
+          name: "Sophie van Berg",
+          role: "CEO, TechStart Nederland",
+          company: "TechStart Nederland",
+          image: "/attached_assets/stock_images/professional_headsho_ce4009be.jpg",
+          quote: "FlowViber heeft ons geholpen om 15 uur per week te besparen op lead kwalificatie. De ROI was al zichtbaar na 2 weken.",
+          results: "15u/week bespaard"
+        },
+        {
+          name: "Marc de Vries",
+          role: "Operations Manager",
+          company: "RetailPro BV",
+          image: "/attached_assets/stock_images/professional_headsho_f6537cb4.jpg",
+          quote: "De AI chatbot op WhatsApp heeft onze klantenservice getransformeerd. Responstijd van 4 uur naar instant, en het team kan zich focussen op complexe vragen.",
+          results: "80% minder supportlast"
+        },
+        {
+          name: "Lisa Janssen",
+          role: "Marketing Director",
+          company: "Growth Agency",
+          image: "/attached_assets/stock_images/professional_headsho_49c973ed.jpg",
+          quote: "Content creatie voor 50+ klanten was een nachtmerrie. Nu draait alles automatisch met betere personalisatie. Schaalbaar zonder extra hires.",
+          results: "200u/maand bespaard"
+        }
+      ]
     },
     carousel: {
       title: "Echte Resultaten Van Echte Bedrijven",
@@ -218,25 +275,82 @@ export const translations = {
       ctaButton: "Get AI Automation Built"
     },
     hero: {
-      badge: "AI-Powered Business Automation",
-      title: "AI Automation That Transforms Your Business",
-      subtitle: "Stop wasting time on repetitive tasks. We build custom AI automations that deliver measurable ROI in weeks, not months.",
-      benefits: {
-        fast: {
-          title: "Fast Results",
-          description: "ROI in 2-4 weeks"
-        },
-        operation: {
-          title: "24/7 Operation",
-          description: "Never stops working"
-        },
-        impact: {
-          title: "Proven Impact",
-          description: "50-80% time saved"
-        }
-      },
+      title: "Less noise, more results — with AI.",
+      subtitle: "We build custom AI automations that deliver measurable ROI in weeks, not months.",
       cta: "Book Free Consultation",
       trust: "No commitment"
+    },
+    stats: {
+      title: "Proven Results",
+      metrics: [
+        {
+          value: "50%",
+          label: "Reduction in routine manual tasks"
+        },
+        {
+          value: "< 2 weeks",
+          label: "Implementation time"
+        },
+        {
+          value: "Measurable",
+          label: "Results from day one"
+        }
+      ]
+    },
+    processFlow: {
+      title: "Our approach to sustainable success",
+      subtitle: "From first conversation to continuous improvement — how we work",
+      steps: [
+        {
+          id: "intake",
+          title: "Intake & Process Mapping",
+          description: "We analyze your current processes and identify automation opportunities"
+        },
+        {
+          id: "proposal",
+          title: "Implementation Proposals",
+          description: "Custom solutions with clear ROI and timeline"
+        },
+        {
+          id: "execution",
+          title: "Execution",
+          description: "Expert development and seamless integration with your existing systems"
+        },
+        {
+          id: "monitor",
+          title: "Monitor & Improve",
+          description: "Continuous optimization and support for maximum impact"
+        }
+      ]
+    },
+    testimonials: {
+      title: "What our clients say",
+      items: [
+        {
+          name: "Sophie van Berg",
+          role: "CEO, TechStart Netherlands",
+          company: "TechStart Netherlands",
+          image: "/attached_assets/stock_images/professional_headsho_ce4009be.jpg",
+          quote: "FlowViber helped us save 15 hours per week on lead qualification. ROI was visible after just 2 weeks.",
+          results: "15hrs/week saved"
+        },
+        {
+          name: "Marc de Vries",
+          role: "Operations Manager",
+          company: "RetailPro BV",
+          image: "/attached_assets/stock_images/professional_headsho_f6537cb4.jpg",
+          quote: "The AI chatbot on WhatsApp transformed our customer service. Response time from 4 hours to instant, and the team can focus on complex questions.",
+          results: "80% less support load"
+        },
+        {
+          name: "Lisa Janssen",
+          role: "Marketing Director",
+          company: "Growth Agency",
+          image: "/attached_assets/stock_images/professional_headsho_49c973ed.jpg",
+          quote: "Content creation for 50+ clients was a nightmare. Now everything runs automatically with better personalization. Scalable without extra hires.",
+          results: "200hrs/month saved"
+        }
+      ]
     },
     carousel: {
       title: "Real Results From Real Businesses",
