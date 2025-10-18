@@ -39,12 +39,12 @@ export function HeroSection() {
           <Button
             onClick={openCalendly}
             size="lg"
-            className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
+            className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all"
           >
             <Calendar className="w-5 h-5 mr-2" />
             {t.cta}
           </Button>
-          <span className="text-sm text-gray-600">
+          <span className="text-sm text-gray-700 font-medium">
             {t.trust}
           </span>
         </div>

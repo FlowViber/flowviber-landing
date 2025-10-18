@@ -254,7 +254,7 @@ function ContactForm() {
         <Button 
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-6 text-lg rounded-lg shadow-sm"
+          className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 text-lg rounded-lg shadow-md hover:shadow-lg transition-all"
         >
           {isSubmitting ? t.contact.form.sending : t.contact.form.submit}
         </Button>
@@ -265,7 +265,7 @@ function ContactForm() {
         <Button 
           asChild
           size="lg" 
-          className="bg-white hover:bg-gray-50 text-gray-900 font-bold border-2 border-gray-200 rounded-lg"
+          className="bg-white hover:bg-gray-50 text-gray-900 font-bold border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-sm hover:shadow-md transition-all"
         >
           <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
             <Calendar className="w-5 h-5 mr-2" />
@@ -301,7 +301,7 @@ export default function LandingPage() {
               <LanguageToggle />
               <Button 
                 asChild
-                className="bg-gray-900 hover:bg-gray-800 text-white font-semibold hidden md:flex rounded-lg"
+                className="bg-gray-900 hover:bg-gray-800 text-white font-bold hidden md:flex rounded-lg shadow-sm hover:shadow-md transition-all"
               >
                 <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
                   {t.header.ctaButton}

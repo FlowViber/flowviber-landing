@@ -10,7 +10,7 @@ export function LanguageToggle() {
   return (
     <Button
       onClick={() => setLanguage(language === 'nl' ? 'en' : 'nl')}
-      className="h-10 px-4 bg-black/10 hover:bg-black/20 text-gray-700 border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/25 backdrop-blur-sm transition-colors font-semibold"
+      className="h-10 px-4 bg-white hover:bg-gray-50 text-gray-900 border-2 border-gray-300 hover:border-gray-400 transition-colors font-bold rounded-lg"
       aria-label="Toggle language"
     >
       {language === 'nl' ? 'EN' : 'NL'}
