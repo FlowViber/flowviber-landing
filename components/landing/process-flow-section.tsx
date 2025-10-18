@@ -48,7 +48,7 @@ export function ProcessFlowSection() {
         <div className="mt-16 relative rounded-3xl overflow-hidden shadow-xl border border-gray-200">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 to-transparent z-10" />
           <Image
-            src="/attached_assets/stock_images/serene_landscape_mou_9364ee6e.jpg"
+            src="/images/serene_landscape_mou_9364ee6e.jpg"
             alt="Process visualization"
             width={1200}
             height={400}

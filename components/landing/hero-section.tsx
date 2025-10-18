@@ -18,7 +18,7 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/attached_assets/stock_images/minimalist_tech_work_49d907c1.jpg"
+          src="/images/minimalist_tech_work_49d907c1.jpg"
           alt="Hero background"
           fill
           className="object-cover"

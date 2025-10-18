@@ -60,7 +60,7 @@ export const translations = {
           name: "Sophie van Berg",
           role: "CEO, TechStart Nederland",
           company: "TechStart Nederland",
-          image: "/attached_assets/stock_images/professional_headsho_ce4009be.jpg",
+          image: "/images/professional_headsho_ce4009be.jpg",
           quote: "FlowViber heeft ons geholpen om 15 uur per week te besparen op lead kwalificatie. De ROI was al zichtbaar na 2 weken.",
           results: "15u/week bespaard"
         },
@@ -68,7 +68,7 @@ export const translations = {
           name: "Marc de Vries",
           role: "Operations Manager",
           company: "RetailPro BV",
-          image: "/attached_assets/stock_images/professional_headsho_f6537cb4.jpg",
+          image: "/images/professional_headsho_f6537cb4.jpg",
           quote: "De AI chatbot op WhatsApp heeft onze klantenservice getransformeerd. Responstijd van 4 uur naar instant, en het team kan zich focussen op complexe vragen.",
           results: "80% minder supportlast"
         },
@@ -76,7 +76,7 @@ export const translations = {
           name: "Lisa Janssen",
           role: "Marketing Director",
           company: "Growth Agency",
-          image: "/attached_assets/stock_images/professional_headsho_49c973ed.jpg",
+          image: "/images/professional_headsho_49c973ed.jpg",
           quote: "Content creatie voor 50+ klanten was een nachtmerrie. Nu draait alles automatisch met betere personalisatie. Schaalbaar zonder extra hires.",
           results: "200u/maand bespaard"
         }
@@ -330,7 +330,7 @@ export const translations = {
           name: "Sophie van Berg",
           role: "CEO, TechStart Netherlands",
           company: "TechStart Netherlands",
-          image: "/attached_assets/stock_images/professional_headsho_ce4009be.jpg",
+          image: "/images/professional_headsho_ce4009be.jpg",
           quote: "FlowViber helped us save 15 hours per week on lead qualification. ROI was visible after just 2 weeks.",
           results: "15hrs/week saved"
         },
@@ -338,7 +338,7 @@ export const translations = {
           name: "Marc de Vries",
           role: "Operations Manager",
           company: "RetailPro BV",
-          image: "/attached_assets/stock_images/professional_headsho_f6537cb4.jpg",
+          image: "/images/professional_headsho_f6537cb4.jpg",
           quote: "The AI chatbot on WhatsApp transformed our customer service. Response time from 4 hours to instant, and the team can focus on complex questions.",
           results: "80% less support load"
         },
@@ -346,7 +346,7 @@ export const translations = {
           name: "Lisa Janssen",
           role: "Marketing Director",
           company: "Growth Agency",
-          image: "/attached_assets/stock_images/professional_headsho_49c973ed.jpg",
+          image: "/images/professional_headsho_49c973ed.jpg",
           quote: "Content creation for 50+ clients was a nightmare. Now everything runs automatically with better personalization. Scalable without extra hires.",
           results: "200hrs/month saved"
         }
