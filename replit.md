@@ -2,23 +2,35 @@
 FlowViber is a professional AI automation service that builds custom business automations, focusing on delivering measurable ROI. The landing page showcases real business case studies, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers. The primary goal is to sell business outcomes and ROI.
 
 # Recent Changes
-**October 17, 2025** (Cookie Consent & Final Polish):
-- **Cookie Consent Banner Added**:
-  * Bilingual cookie consent banner (Dutch & English)
-  * Clean bottom-bar design with Accept/Decline buttons
-  * Persisted choice in localStorage
-  * Respects language preference for messaging
-- **UI/UX Refinements**:
-  * Language toggle simplified: shows only "EN" or "NL" (not duplicated)
-  * Header CTA button updated: "Implementeer AI in uw bedrijf"
-  * Trust badge simplified: "Geen verplichtingen" (removed "vereist")
-  * English trust badge: "No commitment" (removed "required")
+**October 18, 2025** (Complete Light/Minimal Theme Redesign - Duna-Inspired):
+- **Full Design System Overhaul**:
+  * Complete conversion to light/minimal theme (removed all dark mode)
+  * Clean white/gray color palette (white, gray-50, gray-100, gray-900)
+  * Removed all gradient backgrounds and replaced with solid colors
+  * Simplified borders using border-gray-200 throughout
+  * Professional stock images integrated (business, tech, landscape, headshots)
+- **New Hero Section**:
+  * Large background image with overlay
+  * New headline: "Minder ruis, meer resultaat — dankzij AI"
+  * Minimal layout with full-height hero
+  * Clean CTA button with trust badge
+- **New Sections Added**:
+  * Stats Section: 3 metric cards (50% reduction, < 2 weeks, measurable results)
+  * Process Flow Section: Visual diagram showing Intake → Proposals → Execution → Monitor
+  * Testimonials Section: Expandable cards with client photos and quotes
+- **Layout Reorganization**:
+  * Order: Hero → Stats → Process Flow → Testimonials → Case Studies → Contact → Footer
+  * Removed theme toggle (full light theme only)
+  * Simplified header with logo and language toggle
+- **Content Updates**:
+  * All translations updated for new sections (NL/EN)
+  * New testimonial content with realistic business results
+  * Process flow descriptions aligned with actual workflow
 
 **October 17, 2025** (Bilingual Dutch/English Support & SEO):
 - **Complete bilingual system with language toggle** - Dutch as default, English as secondary
 - **Enhanced SEO for "AI voor bedrijven" and "AI for businesses"** - Optimized meta tags, keywords, and LLM-friendly content
-- **All content fully translated** - Header, hero, carousel, forms, all sections in both languages
-- Language preference persisted in localStorage
+- **Cookie consent banner** - Bilingual with localStorage persistence
 
 # User Preferences
 Preferred communication style: Simple, everyday language.
