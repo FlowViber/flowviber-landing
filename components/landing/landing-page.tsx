@@ -82,8 +82,8 @@ function WorkflowSlider() {
                       </div>
                       
                       <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-                        <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center gap-2">
-                          <div className="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center">
+                        <h4 className="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                          <div className="w-6 h-6 bg-slate-700 rounded-full flex items-center justify-center">
                             <Check className="w-4 h-4 text-white" />
                           </div>
                           {t.carousel.results}
@@ -129,7 +129,7 @@ function WorkflowSlider() {
             onClick={() => emblaApi?.scrollTo(index)}
             className={`w-2 h-2 rounded-full transition-all ${
               index === selectedIndex 
-                ? 'bg-gray-900 w-8' 
+                ? 'bg-slate-700 w-8' 
                 : 'bg-gray-300'
             }`}
             aria-label={`Go to result ${index + 1}`}
@@ -183,10 +183,10 @@ function ContactForm() {
   if (submitted) {
     return (
       <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center max-w-2xl mx-auto shadow-sm">
-        <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
           <Check className="w-8 h-8 text-white" />
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">{language === 'nl' ? 'Bedankt!' : 'Thank You!'}</h3>
+        <h3 className="text-2xl font-bold text-slate-800 mb-2">{language === 'nl' ? 'Bedankt!' : 'Thank You!'}</h3>
         <p className="text-gray-600">
           {language === 'nl' 
             ? 'We nemen binnen 24 uur contact met u op om uw automatiseringsbehoeften te bespreken.' 
@@ -254,7 +254,7 @@ function ContactForm() {
         <Button 
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 text-lg rounded-lg shadow-md hover:shadow-lg transition-all"
+          className="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-6 text-lg rounded-lg shadow-md hover:shadow-lg transition-all"
         >
           {isSubmitting ? t.contact.form.sending : t.contact.form.submit}
         </Button>
@@ -265,7 +265,7 @@ function ContactForm() {
         <Button 
           asChild
           size="lg" 
-          className="bg-white hover:bg-gray-50 text-gray-900 font-bold border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-sm hover:shadow-md transition-all"
+          className="bg-white hover:bg-gray-50 text-slate-800 font-bold border-2 border-slate-300 hover:border-slate-400 rounded-lg shadow-sm hover:shadow-md transition-all"
         >
           <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
             <Calendar className="w-5 h-5 mr-2" />
@@ -282,7 +282,7 @@ export default function LandingPage() {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-slate-800">
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -293,15 +293,15 @@ export default function LandingPage() {
                 className="h-10 w-auto"
               />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">FlowViber</h1>
-                <p className="text-sm text-gray-600">{t.header.tagline}</p>
+                <h1 className="text-xl font-bold text-slate-800">FlowViber</h1>
+                <p className="text-sm text-slate-600">{t.header.tagline}</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <LanguageToggle />
               <Button 
                 asChild
-                className="bg-gray-900 hover:bg-gray-800 text-white font-bold hidden md:flex rounded-lg shadow-sm hover:shadow-md transition-all"
+                className="bg-slate-800 hover:bg-slate-700 text-white font-bold hidden md:flex rounded-lg shadow-sm hover:shadow-md transition-all"
               >
                 <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
                   {t.header.ctaButton}
@@ -323,7 +323,7 @@ export default function LandingPage() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
               {t.carousel.title}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -339,7 +339,7 @@ export default function LandingPage() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
               {t.contact.title}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">

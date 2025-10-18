@@ -12,10 +12,10 @@ export function ProcessFlowSection() {
     <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
             {t.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </div>
@@ -27,13 +27,13 @@ export function ProcessFlowSection() {
             {t.steps.map((step, index) => (
               <div key={step.id} className="relative">
                 <div className="bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-gray-300 transition-colors shadow-sm relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-xl mb-4 mx-auto">
+                  <div className="w-12 h-12 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-xl mb-4 mx-auto">
                     {index + 1}
                   </div>
-                  <h3 className="font-bold text-lg mb-2 text-center text-gray-900">
+                  <h3 className="font-bold text-lg mb-2 text-center text-slate-800">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-sm text-center">
+                  <p className="text-slate-600 text-sm text-center">
                     {step.description}
                   </p>
                 </div>
@@ -46,7 +46,7 @@ export function ProcessFlowSection() {
         </div>
 
         <div className="mt-16 relative rounded-3xl overflow-hidden shadow-xl border border-gray-200">
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-transparent z-10" />
           <Image
             src="/images/serene_landscape_mou_9364ee6e.jpg"
             alt="Process visualization"
