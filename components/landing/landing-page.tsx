@@ -360,7 +360,7 @@ export default function LandingPage() {
                   alt="FlowViber"
                   className="h-8 w-auto"
                 />
-                <h3 className="text-lg font-bold text-gray-900">FlowViber</h3>
+                <h3 className="text-lg font-bold text-slate-800">FlowViber</h3>
               </div>
               <p className="text-gray-600">
                 {language === 'nl' 
@@ -370,7 +370,7 @@ export default function LandingPage() {
             </div>
             
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">
+              <h4 className="font-bold text-slate-800 mb-4">
                 {language === 'nl' ? 'Contact' : 'Contact'}
               </h4>
               <div className="space-y-2 text-gray-600">
@@ -388,12 +388,12 @@ export default function LandingPage() {
             </div>
             
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">
+              <h4 className="font-bold text-slate-800 mb-4">
                 {language === 'nl' ? 'Plan een gesprek' : 'Schedule a call'}
               </h4>
               <Button 
                 asChild
-                className="bg-gray-900 hover:bg-gray-800 text-white rounded-lg w-full"
+                className="bg-slate-800 hover:bg-slate-700 text-white rounded-lg w-full font-semibold shadow-sm hover:shadow-md transition-all"
               >
                 <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
                   <Calendar className="w-4 h-4 mr-2" />
