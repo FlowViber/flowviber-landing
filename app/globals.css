@@ -278,12 +278,12 @@ html:not(.dark) .placeholder-slate-400::placeholder {
 }
 
 /* Headers and labels */
-html:not(.dark) h1,
-html:not(.dark) h2,
-html:not(.dark) h3,
-html:not(.dark) h4,
-html:not(.dark) h5,
-html:not(.dark) h6 {
+html:not(.dark) h1:not([style*="color"]),
+html:not(.dark) h2:not([style*="color"]),
+html:not(.dark) h3:not([style*="color"]),
+html:not(.dark) h4:not([style*="color"]),
+html:not(.dark) h5:not([style*="color"]),
+html:not(.dark) h6:not([style*="color"]) {
   color: #374151 !important; /* Softer gray-700 instead of harsh gray-900 */
 }
 
@@ -362,7 +362,7 @@ html:not(.dark) .opacity-50 {
 }
 
 /* 2. Generated Workflow JSON heading - text-white needs override */
-html:not(.dark) h3.text-white {
+html:not(.dark) h3.text-white:not([style*="color"]) {
   color: #1f2937 !important;
 }
 
