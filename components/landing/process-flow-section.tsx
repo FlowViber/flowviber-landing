@@ -45,11 +45,11 @@ export function ProcessFlowSection() {
           </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-slate-800 to-slate-700 rounded-3xl p-12 shadow-xl text-center">
-          <h3 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+        <div className="mt-16 rounded-3xl p-12 shadow-xl text-center" style={{ backgroundColor: '#1e293b' }}>
+          <h3 className="text-5xl font-bold mb-6" style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
             {language === 'nl' ? 'Onze Methode' : 'Our Method'}
           </h3>
-          <p className="text-xl md:text-2xl font-semibold text-white">
+          <p className="text-2xl font-semibold" style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0,0,0,0.2)' }}>
             {language === 'nl' 
               ? 'Gestructureerd, transparant, resultaatgericht'
               : 'Structured, transparent, results-driven'}
