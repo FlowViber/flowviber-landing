@@ -27,11 +27,11 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/70" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-slate-800 leading-tight">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 text-slate-800 leading-tight">
           {t.title}
         </h1>
-        <p className="text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed">
           {t.subtitle}
         </p>
         

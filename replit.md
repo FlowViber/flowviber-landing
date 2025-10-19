@@ -2,6 +2,24 @@
 FlowViber is a professional AI automation service that builds custom business automations, focusing on delivering measurable ROI. The landing page showcases real business case studies, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers. The primary goal is to sell business outcomes and ROI.
 
 # Recent Changes
+**October 19, 2025** (Mobile Responsiveness & Testimonials Removal):
+- **Testimonials Section Removed**:
+  * Removed "Wat onze klanten zeggen" section per user request
+  * Landing page now flows: Hero → Stats → Process Flow → Case Studies → Contact → Footer
+- **Complete Mobile Responsiveness**:
+  * All sections now fully responsive with mobile-first breakpoints
+  * Hero section: Responsive text sizes (text-4xl sm:text-5xl md:text-7xl)
+  * Stats section: 1 column on mobile, 2 on tablet, 3 on desktop
+  * Process flow: 1 column on mobile, 2 on tablet, 4 on desktop
+  * Contact form: Stacked inputs on mobile, 2 columns on desktop
+  * Header: Smaller logo and text on mobile, tagline hidden on small screens
+  * Footer: Single column on mobile, 2 on tablet, 3 on desktop
+  * All padding and spacing adjusted for mobile (sm:, md: breakpoints)
+- **CSS Fix for "Onze Methode" Banner**:
+  * Fixed white text color issue by modifying global CSS
+  * Updated h3 selector to exclude inline styles: `h3:not([style*="color"])`
+  * Banner now displays white text correctly on dark slate background
+
 **October 19, 2025** (Complete Contrast Optimization & Slate Color System):
 - **Color System Migration**:
   * Removed ALL pure black (#000000, gray-900) from entire website

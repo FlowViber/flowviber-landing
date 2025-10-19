@@ -20,7 +20,6 @@ import { CookieConsent } from "./cookie-consent"
 import { HeroSection } from "./hero-section"
 import { StatsSection } from "./stats-section"
 import { ProcessFlowSection } from "./process-flow-section"
-import { TestimonialsSection } from "./testimonials-section"
 
 function WorkflowSlider() {
   const { language } = useLanguage();
@@ -197,9 +196,9 @@ function ContactForm() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="max-w-3xl mx-auto px-4">
+      <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700">{t.contact.form.name}</label>
             <Input
@@ -286,22 +285,22 @@ export default function LandingPage() {
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <img 
                 src="/flow-viber-logo.png" 
                 alt="FlowViber"
-                className="h-10 w-auto"
+                className="h-8 sm:h-10 w-auto"
               />
               <div>
-                <h1 className="text-xl font-bold text-slate-800">FlowViber</h1>
-                <p className="text-sm text-slate-600">{t.header.tagline}</p>
+                <h1 className="text-lg sm:text-xl font-bold text-slate-800">FlowViber</h1>
+                <p className="text-xs sm:text-sm text-slate-600 hidden sm:block">{t.header.tagline}</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <LanguageToggle />
               <Button 
                 asChild
-                className="bg-slate-800 hover:bg-slate-700 text-white font-bold hidden md:flex rounded-lg shadow-sm hover:shadow-md transition-all"
+                className="bg-slate-800 hover:bg-slate-700 text-white font-bold hidden md:flex rounded-lg shadow-sm hover:shadow-md transition-all text-sm"
               >
                 <a href="https://calendly.com/contact-flowviber/30min" target="_blank" rel="noopener noreferrer">
                   {t.header.ctaButton}
@@ -317,16 +316,14 @@ export default function LandingPage() {
       <StatsSection />
       
       <ProcessFlowSection />
-      
-      <TestimonialsSection />
 
-      <section className="py-20 px-6 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-slate-800">
               {t.carousel.title}
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               {language === 'nl' 
                 ? 'Ontdek hoe bedrijven zoals de uwe succes behalen met onze AI-automatisering'
                 : 'Discover how companies like yours achieve success with our AI automation'}
@@ -336,13 +333,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-slate-800">
               {t.contact.title}
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               {t.contact.subtitle}
             </p>
           </div>
@@ -350,9 +347,9 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <footer className="bg-white border-t border-gray-200 py-12 px-6">
+      <footer className="bg-white border-t border-gray-200 py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img 
