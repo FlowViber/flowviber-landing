@@ -2,10 +2,28 @@
 FlowViber is a professional AI automation service that builds custom business automations, focusing on delivering measurable ROI. The landing page showcases real business case studies, features a contact form with email notifications via Resend, Calendly booking integration, and transparent pricing tiers. The primary goal is to sell business outcomes and ROI.
 
 # Recent Changes
+**October 19, 2025** (Complete Contrast Optimization & Slate Color System):
+- **Color System Migration**:
+  * Removed ALL pure black (#000000, gray-900) from entire website
+  * Replaced with warm slate-700/800 colors throughout
+  * Improved WCAG accessibility with better contrast ratios
+  * Consistent professional appearance with warmer tones
+- **Contrast Enhancements**:
+  * Hero "Geen verplichtingen" badge: White background with border and bold text
+  * All buttons converted to slate-800 with improved shadows
+  * "Onze Methode" section: 90% dark overlay with text-shadows for maximum legibility
+  * Footer buttons and headings: Consistent slate-800 styling
+  * Language toggle: Slate borders and text for better visibility
+  * Cookie consent: Slate-800 background for better contrast
+- **Typography Improvements**:
+  * Increased font weights for better readability (semibold/bold)
+  * Added drop shadows where needed for text on images
+  * Larger text sizes in key sections for accessibility
+
 **October 18, 2025** (Complete Light/Minimal Theme Redesign - Duna-Inspired):
 - **Full Design System Overhaul**:
   * Complete conversion to light/minimal theme (removed all dark mode)
-  * Clean white/gray color palette (white, gray-50, gray-100, gray-900)
+  * Clean white/gray/slate color palette
   * Removed all gradient backgrounds and replaced with solid colors
   * Simplified borders using border-gray-200 throughout
   * Professional stock images integrated (business, tech, landscape, headshots)

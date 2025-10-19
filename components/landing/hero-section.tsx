@@ -44,7 +44,7 @@ export function HeroSection() {
             <Calendar className="w-5 h-5 mr-2" />
             {t.cta}
           </Button>
-          <span className="text-sm text-slate-700 font-medium">
+          <span className="text-sm text-slate-800 font-bold bg-white/80 px-4 py-2 rounded-full border border-slate-200">
             {t.trust}
           </span>
         </div>
