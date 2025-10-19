@@ -253,7 +253,10 @@ function ContactForm() {
         <Button 
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-6 text-lg rounded-lg shadow-md hover:shadow-lg transition-all"
+          className="w-full font-bold py-6 text-lg rounded-lg shadow-md hover:shadow-lg transition-all"
+          style={{ backgroundColor: '#1e293b', color: '#ffffff' }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#334155'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#1e293b'}
         >
           {isSubmitting ? t.contact.form.sending : t.contact.form.submit}
         </Button>

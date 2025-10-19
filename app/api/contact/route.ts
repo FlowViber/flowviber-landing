@@ -6,10 +6,10 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, email, description, budget } = body
+    const { name, email, company, message } = body
 
     // Validate required fields
-    if (!name || !email || !description || !budget) {
+    if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -27,14 +27,14 @@ export async function POST(request: Request) {
 
     // Format the email content
     const emailContent = `
-New Workflow Consultation Request
+New Contact Form Submission
 
 Name: ${name}
 Email: ${email}
-Budget Range: ${budget}
+${company ? `Company: ${company}` : ''}
 
-Description:
-${description}
+Message:
+${message}
 
 ---
 Sent from FlowViber Contact Form
@@ -51,8 +51,8 @@ Sent from FlowViber Contact Form
         body: JSON.stringify({
           name,
           email,
-          description,
-          budget,
+          company,
+          message,
           timestamp: new Date().toISOString(),
         }),
       })
@@ -69,7 +69,7 @@ Sent from FlowViber Contact Form
         const result = await resend.emails.send({
           from: 'FlowViber <onboarding@resend.dev>',
           to: 'luca@flowviber.io',
-          subject: `New Workflow Request from ${name}`,
+          subject: `New Contact Form Submission from ${name}${company ? ` (${company})` : ''}`,
           text: emailContent,
           replyTo: email,
         })
