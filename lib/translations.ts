@@ -5,7 +5,7 @@ export const translations = {
       ctaButton: "Implementeer AI in uw bedrijf"
     },
     hero: {
-      title: "Minder ruis, meer resultaat — dankzij AI.",
+      title: "AI denkt sneller dan uw concurrent.",
       subtitle: "Wij bouwen op maat gemaakte AI-automatiseringen die meetbare ROI leveren in weken, niet maanden.",
       cta: "Boek Gratis Consultatie Gesprek",
       trust: "Geen verplichtingen"
